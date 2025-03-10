@@ -53,7 +53,7 @@ async def target_error(ctx, error):
     if isinstance(error, commands.MissingPermissions):
         await ctx.send("You don't have permission to set a target!")
     elif isinstance(error, commands.MissingRequiredArgument):
-        await cts.send("Please mention a user to set as the target. Example: '!target @username'")
+        await ctx.send("Please mention a user to set as the target. Example: '!target @username'")
 
 @bot.command()
 async def join(ctx):
