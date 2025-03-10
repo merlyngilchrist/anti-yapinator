@@ -21,8 +21,8 @@ bot = commands.Bot(command_prefix="!", intents=intents)
 target_users = {}
 
 logging.basicConfig(
-    level=logging.INFO
-    format="%(asctime)s - %(levelname)s - %(message)s"
+    level=logging.INFO,
+    format="%(asctime)s - %(levelname)s - %(message)s",
     handlers=[
         logging.FileHandler("bot.log"),
         logging.StreamHandler()
