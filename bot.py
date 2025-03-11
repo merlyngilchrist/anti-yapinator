@@ -68,6 +68,7 @@ async def target(ctx, member: discord.Member):
     await ctx.send(f"Target set to {member.mention}!")
 
 @bot.command()
+@commands.cooldown(1, 5, commands.BucketType.guild)
 async def join(ctx):
     if ctx.author.voice:
         channel = ctx.author.voice.channel
@@ -126,6 +127,16 @@ async def showrole(ctx):
         await ctx.send(f"The allowed role is '{role.name}'.")
     else:
         await ctx.send("No allowed role has been set.")
+
+@bot.command()
+async def help(ctx):
+    embed = discord.Embed(title="Bot Commands", color=discord.Color.blue())
+    embed.add_field(name="!target", value="Set a target user for the bot.", inline=False)
+    embed.add_field(name="!removetarget", value="Remove the current target.", inline=False)
+    embed.add_field(name="!join", value="Bot will join the voice call you're currently in.", inline=False)
+    embed.add_field(name="!leave", value="Bot will leave the current voice call.", inline=False)
+    embed.add_field(name="!setrole", value="Assign a role to manage the bot.", inline=False)
+    await ctx.send(embed=embed)
 
 @bot.command()
 async def removetarget(ctx):
