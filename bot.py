@@ -19,6 +19,7 @@ bot = commands.Bot(command_prefix="!", intents=intents)
 
 # Dictionary to store the target user per server
 target_users = {}
+allowed_roles = {}
 
 logging.basicConfig(
     level=logging.INFO,
@@ -38,22 +39,33 @@ async def on_ready():
         logger.info(f"Connected to guild: {guild.name} (ID: {guild.id})")
 
 @bot.command()
+@commands.has_permissions(administrator=True)
+async def setrole(ctx, role: discord.Role):
+    guild_id = ctx.guild.id
+    allowed_roles[guild_id] = role.id
+    await ctx.send(f"Allowed role set to '{role.name}'.")
+    logger.info(f"Allowed role set to {role.name} in {ctx.guild.name}")
+
+def has_allowed_role(ctx):
+    guild_id = ctx.guild.id
+    if guild_id in allowed_roles:
+        role_id = allowed_roles[guild_id]
+        return any(role.id == role_id for role in ctx.author.roles)
+    return False
+
+@bot.command()
 async def hello(ctx):
     await ctx.send(f"Hello, {ctx.author.mention}!")
 
 @bot.command()
-@commands.has_permissions(administrator=True)
 async def target(ctx, member: discord.Member):
+    if not has_allowed_role(ctx):
+        await ctx.send("You don't have permission to set a target.")
+        return
+    
     target_users[ctx.guild.id] = member.id
     logger.info(f"Target set: {member.name} (ID: {member.id}) in guild {ctx.guild.name}")
     await ctx.send(f"Target set to {member.mention}!")
-
-@target.error
-async def target_error(ctx, error):
-    if isinstance(error, commands.MissingPermissions):
-        await ctx.send("You don't have permission to set a target!")
-    elif isinstance(error, commands.MissingRequiredArgument):
-        await ctx.send("Please mention a user to set as the target. Example: '!target @username'")
 
 @bot.command()
 async def join(ctx):
@@ -102,13 +114,25 @@ async def on_voice_state_update(member, before, after):
             voice_client = member.guild.voice_client
             if voice_client and not voice_client.is_playing():
                 await member.guild.system_channel.send(f"{member.display_name} is speaking!")
-                source = discord.FFmpegPCMAudio("alert.mp3") #changes when we get audio
+                source = discord.FFmpegPCMAudio("aaauuuggghhh.mp3") #changes when we get audio
                 voice_client.play(source)
                 logger.info(f"Played alert for {member.name} in {member.guild.name}")
 
 @bot.command()
-@commands.has_permissions(administrator=True)
+async def showrole(ctx):
+    guild_id = ctx.guild.id
+    if guild_id in allowed_roles:
+        role = discord.utils.get(ctx.guild.roles, id=allowed_roles[guild_id])
+        await ctx.send(f"The allowed role is '{role.name}'.")
+    else:
+        await ctx.send("No allowed role has been set.")
+
+@bot.command()
 async def removetarget(ctx):
+    if not has_allowed_role(ctx):
+        await ctx.send("You don't have permission to remove the target.")
+        return
+    
     guild_id = ctx.guild.id
 
     if guild_id in target_users:
@@ -122,13 +146,6 @@ async def removetarget(ctx):
             await ctx.send(f"Target user (ID: {removed_user_id}) has been removed.")
     else:
         await ctx.send("No target is currently set for this server")
-
-@removetarget.error
-async def removetarget_error(ctx, error):
-    if isinstance(error, commands.MissingPermissions):
-        await ctx.send("You don't have permission to remove a target!")
-    else:
-        logger.error(f"Error in removetarget command: {error}")
 
 @bot.event
 async def on_command_error(ctx, error):
