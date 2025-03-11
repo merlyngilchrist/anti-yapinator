@@ -128,6 +128,8 @@ async def showrole(ctx):
     else:
         await ctx.send("No allowed role has been set.")
 
+bot.remove_command("help")
+
 @bot.command()
 async def help(ctx):
     embed = discord.Embed(title="Bot Commands", color=discord.Color.blue())
