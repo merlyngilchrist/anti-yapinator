@@ -23,7 +23,7 @@ Before you let the **Anti-Yapinator** loose, make sure you have:
 ### Installation
 1. Clone this nonsense to your machine:
    ```sh
-   git clone https://github.com/yourusername/anti-yapinator.git
+   git clone https://github.com/merlyngilchrist/anti-yapinator.git
    cd anti-yapinator
 
 2. Install the necessary ~~black magic~~ dependencies:
@@ -73,6 +73,3 @@ Have a hilarious idea? Found a bug that ruins the fun? Submit a pull request or 
 
 Do whatever you want with this. Just don't blame me when your friends get mad.
 
----
-
-This will display correctly on GitHub with all the formatting intact. Just update the GitHub repo link (`yourusername/anti-yapinator`) to match your actual repo. 🚀
