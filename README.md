@@ -26,7 +26,7 @@ Before you let the **Anti-Yapinator** loose, make sure you have:
    git clone https://github.com/yourusername/anti-yapinator.git
    cd anti-yapinator
 
-2. Install the necessary black magic dependencies:
+2. Install the necessary ~~black magic~~ dependencies:
    ```sh
    pip install -r requirements.txt
 
@@ -59,7 +59,6 @@ Before you let the **Anti-Yapinator** loose, make sure you have:
    python bot.py
 
 4. Add you **Eviroment Variables**:
-   ```sh
    -  `DISCORD_BOT_TOKEN`
 
 5. Deploy and sit back as your bot wreaks havoc.
