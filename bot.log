@@ -341,3 +341,1860 @@ aiohttp.client_exceptions.ClientConnectorDNSError: Cannot connect to host gatewa
 2025-03-10 18:08:00,604 - INFO - Shard ID None has connected to Gateway (Session ID: f0a20e0c5b2efdc08c55428466d41c57).
 2025-03-10 18:08:02,654 - INFO - Logged in as anti-yappinator#0972 (ID: 1346984198023680121)
 2025-03-10 18:08:02,657 - INFO - Connected to guild: Testing Server (ID: 1346987972121071739)
+2025-03-10 18:33:52,117 - INFO - logging in using static token
+2025-03-10 18:33:53,163 - INFO - Shard ID None has connected to Gateway (Session ID: 59e715663238225870b80133fb6de086).
+2025-03-10 18:33:55,180 - INFO - Logged in as anti-yappinator#0972 (ID: 1346984198023680121)
+2025-03-10 18:33:55,181 - INFO - Connected to guild: Testing Server (ID: 1346987972121071739)
+2025-03-10 18:37:34,811 - INFO - Allowed role set to gayboy in Testing Server
+2025-03-10 18:41:01,023 - INFO - Allowed role set to Admin in Testing Server
+2025-03-10 18:41:13,211 - INFO - Target set: skrubls (ID: 617064900799234064) in guild Testing Server
+2025-03-10 23:44:04,409 - ERROR - Attempting a reconnect in 0.71s
+Traceback (most recent call last):
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\connector.py", line 1362, in _create_direct_connection
+    hosts = await self._resolve_host(host, port, traces=traces)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\connector.py", line 995, in _resolve_host
+    return await asyncio.shield(resolved_host_task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\connector.py", line 1026, in _resolve_host_with_throttle
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\resolver.py", line 36, in resolve
+    infos = await self._loop.getaddrinfo(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\asyncio\base_events.py", line 934, in getaddrinfo
+    return await self.run_in_executor(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        None, getaddr_func, host, port, family, type, proto, flags)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\concurrent\futures\thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\socket.py", line 975, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\client.py", line 701, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\asyncio\tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\gateway.py", line 375, in from_client
+    socket = await client.http.ws_connect(str(url))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\http.py", line 554, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\client.py", line 1004, in _ws_connect
+    resp = await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+    ...<11 lines>...
+    )
+    ^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\client.py", line 703, in _request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        req, traces=traces, timeout=real_timeout
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\connector.py", line 548, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\connector.py", line 1056, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\connector.py", line 1368, in _create_direct_connection
+    raise ClientConnectorDNSError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorDNSError: Cannot connect to host gateway-us-east1-d.discord.gg:443 ssl:default [getaddrinfo failed]
+2025-03-10 23:44:05,169 - ERROR - Attempting a reconnect in 1.61s
+Traceback (most recent call last):
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\connector.py", line 1362, in _create_direct_connection
+    hosts = await self._resolve_host(host, port, traces=traces)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\connector.py", line 995, in _resolve_host
+    return await asyncio.shield(resolved_host_task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\connector.py", line 1026, in _resolve_host_with_throttle
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\resolver.py", line 36, in resolve
+    infos = await self._loop.getaddrinfo(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\asyncio\base_events.py", line 934, in getaddrinfo
+    return await self.run_in_executor(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        None, getaddr_func, host, port, family, type, proto, flags)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\concurrent\futures\thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\socket.py", line 975, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\client.py", line 701, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\asyncio\tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\gateway.py", line 375, in from_client
+    socket = await client.http.ws_connect(str(url))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\http.py", line 554, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\client.py", line 1004, in _ws_connect
+    resp = await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+    ...<11 lines>...
+    )
+    ^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\client.py", line 703, in _request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        req, traces=traces, timeout=real_timeout
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\connector.py", line 548, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\connector.py", line 1056, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\connector.py", line 1368, in _create_direct_connection
+    raise ClientConnectorDNSError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorDNSError: Cannot connect to host gateway-us-east1-d.discord.gg:443 ssl:default [getaddrinfo failed]
+2025-03-10 23:44:06,830 - ERROR - Attempting a reconnect in 4.94s
+Traceback (most recent call last):
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\connector.py", line 1362, in _create_direct_connection
+    hosts = await self._resolve_host(host, port, traces=traces)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\connector.py", line 995, in _resolve_host
+    return await asyncio.shield(resolved_host_task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\connector.py", line 1026, in _resolve_host_with_throttle
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\resolver.py", line 36, in resolve
+    infos = await self._loop.getaddrinfo(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\asyncio\base_events.py", line 934, in getaddrinfo
+    return await self.run_in_executor(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        None, getaddr_func, host, port, family, type, proto, flags)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\concurrent\futures\thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\socket.py", line 975, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\client.py", line 701, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\asyncio\tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\gateway.py", line 375, in from_client
+    socket = await client.http.ws_connect(str(url))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\http.py", line 554, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\client.py", line 1004, in _ws_connect
+    resp = await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+    ...<11 lines>...
+    )
+    ^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\client.py", line 703, in _request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        req, traces=traces, timeout=real_timeout
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\connector.py", line 548, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\connector.py", line 1056, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\connector.py", line 1368, in _create_direct_connection
+    raise ClientConnectorDNSError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorDNSError: Cannot connect to host gateway-us-east1-d.discord.gg:443 ssl:default [getaddrinfo failed]
+2025-03-10 23:44:11,860 - ERROR - Attempting a reconnect in 13.46s
+Traceback (most recent call last):
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\connector.py", line 1362, in _create_direct_connection
+    hosts = await self._resolve_host(host, port, traces=traces)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\connector.py", line 995, in _resolve_host
+    return await asyncio.shield(resolved_host_task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\connector.py", line 1026, in _resolve_host_with_throttle
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\resolver.py", line 36, in resolve
+    infos = await self._loop.getaddrinfo(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\asyncio\base_events.py", line 934, in getaddrinfo
+    return await self.run_in_executor(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        None, getaddr_func, host, port, family, type, proto, flags)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\concurrent\futures\thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\socket.py", line 975, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\client.py", line 701, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\asyncio\tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\gateway.py", line 375, in from_client
+    socket = await client.http.ws_connect(str(url))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\http.py", line 554, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\client.py", line 1004, in _ws_connect
+    resp = await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+    ...<11 lines>...
+    )
+    ^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\client.py", line 703, in _request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        req, traces=traces, timeout=real_timeout
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\connector.py", line 548, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\connector.py", line 1056, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\connector.py", line 1368, in _create_direct_connection
+    raise ClientConnectorDNSError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorDNSError: Cannot connect to host gateway-us-east1-d.discord.gg:443 ssl:default [getaddrinfo failed]
+2025-03-11 00:43:27,185 - ERROR - Attempting a reconnect in 0.60s
+Traceback (most recent call last):
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\connector.py", line 1362, in _create_direct_connection
+    hosts = await self._resolve_host(host, port, traces=traces)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\connector.py", line 995, in _resolve_host
+    return await asyncio.shield(resolved_host_task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\connector.py", line 1026, in _resolve_host_with_throttle
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\resolver.py", line 36, in resolve
+    infos = await self._loop.getaddrinfo(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\asyncio\base_events.py", line 934, in getaddrinfo
+    return await self.run_in_executor(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        None, getaddr_func, host, port, family, type, proto, flags)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\concurrent\futures\thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\socket.py", line 975, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\client.py", line 701, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\asyncio\tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\gateway.py", line 375, in from_client
+    socket = await client.http.ws_connect(str(url))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\http.py", line 554, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\client.py", line 1004, in _ws_connect
+    resp = await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+    ...<11 lines>...
+    )
+    ^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\client.py", line 703, in _request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        req, traces=traces, timeout=real_timeout
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\connector.py", line 548, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\connector.py", line 1056, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\connector.py", line 1368, in _create_direct_connection
+    raise ClientConnectorDNSError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorDNSError: Cannot connect to host gateway-us-east1-d.discord.gg:443 ssl:default [getaddrinfo failed]
+2025-03-11 00:43:27,856 - ERROR - Attempting a reconnect in 0.86s
+Traceback (most recent call last):
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\connector.py", line 1362, in _create_direct_connection
+    hosts = await self._resolve_host(host, port, traces=traces)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\connector.py", line 995, in _resolve_host
+    return await asyncio.shield(resolved_host_task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\connector.py", line 1026, in _resolve_host_with_throttle
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\resolver.py", line 36, in resolve
+    infos = await self._loop.getaddrinfo(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\asyncio\base_events.py", line 934, in getaddrinfo
+    return await self.run_in_executor(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        None, getaddr_func, host, port, family, type, proto, flags)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\concurrent\futures\thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\socket.py", line 975, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\client.py", line 701, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\asyncio\tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\gateway.py", line 375, in from_client
+    socket = await client.http.ws_connect(str(url))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\http.py", line 554, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\client.py", line 1004, in _ws_connect
+    resp = await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+    ...<11 lines>...
+    )
+    ^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\client.py", line 703, in _request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        req, traces=traces, timeout=real_timeout
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\connector.py", line 548, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\connector.py", line 1056, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\connector.py", line 1368, in _create_direct_connection
+    raise ClientConnectorDNSError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorDNSError: Cannot connect to host gateway-us-east1-d.discord.gg:443 ssl:default [getaddrinfo failed]
+2025-03-11 00:43:28,777 - ERROR - Attempting a reconnect in 4.42s
+Traceback (most recent call last):
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\connector.py", line 1362, in _create_direct_connection
+    hosts = await self._resolve_host(host, port, traces=traces)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\connector.py", line 995, in _resolve_host
+    return await asyncio.shield(resolved_host_task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\connector.py", line 1026, in _resolve_host_with_throttle
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\resolver.py", line 36, in resolve
+    infos = await self._loop.getaddrinfo(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\asyncio\base_events.py", line 934, in getaddrinfo
+    return await self.run_in_executor(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        None, getaddr_func, host, port, family, type, proto, flags)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\concurrent\futures\thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\socket.py", line 975, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\client.py", line 701, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\asyncio\tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\gateway.py", line 375, in from_client
+    socket = await client.http.ws_connect(str(url))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\http.py", line 554, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\client.py", line 1004, in _ws_connect
+    resp = await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+    ...<11 lines>...
+    )
+    ^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\client.py", line 703, in _request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        req, traces=traces, timeout=real_timeout
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\connector.py", line 548, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\connector.py", line 1056, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\connector.py", line 1368, in _create_direct_connection
+    raise ClientConnectorDNSError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorDNSError: Cannot connect to host gateway-us-east1-d.discord.gg:443 ssl:default [getaddrinfo failed]
+2025-03-11 00:43:33,253 - ERROR - Attempting a reconnect in 7.91s
+Traceback (most recent call last):
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\connector.py", line 1362, in _create_direct_connection
+    hosts = await self._resolve_host(host, port, traces=traces)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\connector.py", line 995, in _resolve_host
+    return await asyncio.shield(resolved_host_task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\connector.py", line 1026, in _resolve_host_with_throttle
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\resolver.py", line 36, in resolve
+    infos = await self._loop.getaddrinfo(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\asyncio\base_events.py", line 934, in getaddrinfo
+    return await self.run_in_executor(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        None, getaddr_func, host, port, family, type, proto, flags)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\concurrent\futures\thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\socket.py", line 975, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\client.py", line 701, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\asyncio\tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\gateway.py", line 375, in from_client
+    socket = await client.http.ws_connect(str(url))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\http.py", line 554, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\client.py", line 1004, in _ws_connect
+    resp = await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+    ...<11 lines>...
+    )
+    ^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\client.py", line 703, in _request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        req, traces=traces, timeout=real_timeout
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\connector.py", line 548, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\connector.py", line 1056, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\connector.py", line 1368, in _create_direct_connection
+    raise ClientConnectorDNSError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorDNSError: Cannot connect to host gateway-us-east1-d.discord.gg:443 ssl:default [getaddrinfo failed]
+2025-03-11 00:43:41,240 - ERROR - Attempting a reconnect in 30.92s
+Traceback (most recent call last):
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\connector.py", line 1362, in _create_direct_connection
+    hosts = await self._resolve_host(host, port, traces=traces)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\connector.py", line 995, in _resolve_host
+    return await asyncio.shield(resolved_host_task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\connector.py", line 1026, in _resolve_host_with_throttle
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\resolver.py", line 36, in resolve
+    infos = await self._loop.getaddrinfo(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\asyncio\base_events.py", line 934, in getaddrinfo
+    return await self.run_in_executor(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        None, getaddr_func, host, port, family, type, proto, flags)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\concurrent\futures\thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\socket.py", line 975, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\client.py", line 701, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\asyncio\tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\gateway.py", line 375, in from_client
+    socket = await client.http.ws_connect(str(url))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\http.py", line 554, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\client.py", line 1004, in _ws_connect
+    resp = await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+    ...<11 lines>...
+    )
+    ^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\client.py", line 703, in _request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        req, traces=traces, timeout=real_timeout
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\connector.py", line 548, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\connector.py", line 1056, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\connector.py", line 1368, in _create_direct_connection
+    raise ClientConnectorDNSError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorDNSError: Cannot connect to host gateway-us-east1-d.discord.gg:443 ssl:default [getaddrinfo failed]
+2025-03-11 00:44:12,199 - ERROR - Attempting a reconnect in 15.83s
+Traceback (most recent call last):
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\connector.py", line 1362, in _create_direct_connection
+    hosts = await self._resolve_host(host, port, traces=traces)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\connector.py", line 995, in _resolve_host
+    return await asyncio.shield(resolved_host_task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\connector.py", line 1026, in _resolve_host_with_throttle
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\resolver.py", line 36, in resolve
+    infos = await self._loop.getaddrinfo(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\asyncio\base_events.py", line 934, in getaddrinfo
+    return await self.run_in_executor(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        None, getaddr_func, host, port, family, type, proto, flags)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\concurrent\futures\thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\socket.py", line 975, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\client.py", line 701, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\asyncio\tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\gateway.py", line 375, in from_client
+    socket = await client.http.ws_connect(str(url))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\http.py", line 554, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\client.py", line 1004, in _ws_connect
+    resp = await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+    ...<11 lines>...
+    )
+    ^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\client.py", line 703, in _request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        req, traces=traces, timeout=real_timeout
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\connector.py", line 548, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\connector.py", line 1056, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\connector.py", line 1368, in _create_direct_connection
+    raise ClientConnectorDNSError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorDNSError: Cannot connect to host gateway-us-east1-d.discord.gg:443 ssl:default [getaddrinfo failed]
+2025-03-11 00:44:28,131 - ERROR - Attempting a reconnect in 26.86s
+Traceback (most recent call last):
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\connector.py", line 1362, in _create_direct_connection
+    hosts = await self._resolve_host(host, port, traces=traces)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\connector.py", line 995, in _resolve_host
+    return await asyncio.shield(resolved_host_task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\connector.py", line 1026, in _resolve_host_with_throttle
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\resolver.py", line 36, in resolve
+    infos = await self._loop.getaddrinfo(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\asyncio\base_events.py", line 934, in getaddrinfo
+    return await self.run_in_executor(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        None, getaddr_func, host, port, family, type, proto, flags)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\concurrent\futures\thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\socket.py", line 975, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\client.py", line 701, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\asyncio\tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\gateway.py", line 375, in from_client
+    socket = await client.http.ws_connect(str(url))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\http.py", line 554, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\client.py", line 1004, in _ws_connect
+    resp = await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+    ...<11 lines>...
+    )
+    ^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\client.py", line 703, in _request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        req, traces=traces, timeout=real_timeout
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\connector.py", line 548, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\connector.py", line 1056, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\connector.py", line 1368, in _create_direct_connection
+    raise ClientConnectorDNSError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorDNSError: Cannot connect to host gateway-us-east1-d.discord.gg:443 ssl:default [getaddrinfo failed]
+2025-03-11 00:44:55,078 - ERROR - Attempting a reconnect in 32.69s
+Traceback (most recent call last):
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\connector.py", line 1362, in _create_direct_connection
+    hosts = await self._resolve_host(host, port, traces=traces)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\connector.py", line 995, in _resolve_host
+    return await asyncio.shield(resolved_host_task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\connector.py", line 1026, in _resolve_host_with_throttle
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\resolver.py", line 36, in resolve
+    infos = await self._loop.getaddrinfo(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\asyncio\base_events.py", line 934, in getaddrinfo
+    return await self.run_in_executor(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        None, getaddr_func, host, port, family, type, proto, flags)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\concurrent\futures\thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\socket.py", line 975, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\client.py", line 701, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\asyncio\tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\gateway.py", line 375, in from_client
+    socket = await client.http.ws_connect(str(url))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\http.py", line 554, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\client.py", line 1004, in _ws_connect
+    resp = await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+    ...<11 lines>...
+    )
+    ^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\client.py", line 703, in _request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        req, traces=traces, timeout=real_timeout
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\connector.py", line 548, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\connector.py", line 1056, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\connector.py", line 1368, in _create_direct_connection
+    raise ClientConnectorDNSError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorDNSError: Cannot connect to host gateway-us-east1-d.discord.gg:443 ssl:default [getaddrinfo failed]
+2025-03-11 00:45:27,824 - ERROR - Attempting a reconnect in 424.26s
+Traceback (most recent call last):
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\connector.py", line 1362, in _create_direct_connection
+    hosts = await self._resolve_host(host, port, traces=traces)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\connector.py", line 995, in _resolve_host
+    return await asyncio.shield(resolved_host_task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\connector.py", line 1026, in _resolve_host_with_throttle
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\resolver.py", line 36, in resolve
+    infos = await self._loop.getaddrinfo(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\asyncio\base_events.py", line 934, in getaddrinfo
+    return await self.run_in_executor(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        None, getaddr_func, host, port, family, type, proto, flags)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\concurrent\futures\thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\socket.py", line 975, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\client.py", line 701, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\asyncio\tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\gateway.py", line 375, in from_client
+    socket = await client.http.ws_connect(str(url))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\http.py", line 554, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\client.py", line 1004, in _ws_connect
+    resp = await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+    ...<11 lines>...
+    )
+    ^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\client.py", line 703, in _request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        req, traces=traces, timeout=real_timeout
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\connector.py", line 548, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\connector.py", line 1056, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\connector.py", line 1368, in _create_direct_connection
+    raise ClientConnectorDNSError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorDNSError: Cannot connect to host gateway-us-east1-d.discord.gg:443 ssl:default [getaddrinfo failed]
+2025-03-11 00:52:32,111 - ERROR - Attempting a reconnect in 1023.29s
+Traceback (most recent call last):
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\connector.py", line 1362, in _create_direct_connection
+    hosts = await self._resolve_host(host, port, traces=traces)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\connector.py", line 995, in _resolve_host
+    return await asyncio.shield(resolved_host_task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\connector.py", line 1026, in _resolve_host_with_throttle
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\resolver.py", line 36, in resolve
+    infos = await self._loop.getaddrinfo(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\asyncio\base_events.py", line 934, in getaddrinfo
+    return await self.run_in_executor(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        None, getaddr_func, host, port, family, type, proto, flags)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\concurrent\futures\thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\socket.py", line 975, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\client.py", line 701, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\asyncio\tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\gateway.py", line 375, in from_client
+    socket = await client.http.ws_connect(str(url))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\http.py", line 554, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\client.py", line 1004, in _ws_connect
+    resp = await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+    ...<11 lines>...
+    )
+    ^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\client.py", line 703, in _request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        req, traces=traces, timeout=real_timeout
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\connector.py", line 548, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\connector.py", line 1056, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\connector.py", line 1368, in _create_direct_connection
+    raise ClientConnectorDNSError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorDNSError: Cannot connect to host gateway-us-east1-d.discord.gg:443 ssl:default [getaddrinfo failed]
+2025-03-11 01:09:35,431 - ERROR - Attempting a reconnect in 996.37s
+Traceback (most recent call last):
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\connector.py", line 1362, in _create_direct_connection
+    hosts = await self._resolve_host(host, port, traces=traces)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\connector.py", line 995, in _resolve_host
+    return await asyncio.shield(resolved_host_task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\connector.py", line 1026, in _resolve_host_with_throttle
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\resolver.py", line 36, in resolve
+    infos = await self._loop.getaddrinfo(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\asyncio\base_events.py", line 934, in getaddrinfo
+    return await self.run_in_executor(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        None, getaddr_func, host, port, family, type, proto, flags)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\concurrent\futures\thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\socket.py", line 975, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\client.py", line 701, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\asyncio\tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\gateway.py", line 375, in from_client
+    socket = await client.http.ws_connect(str(url))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\http.py", line 554, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\client.py", line 1004, in _ws_connect
+    resp = await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+    ...<11 lines>...
+    )
+    ^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\client.py", line 703, in _request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        req, traces=traces, timeout=real_timeout
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\connector.py", line 548, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\connector.py", line 1056, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\connector.py", line 1368, in _create_direct_connection
+    raise ClientConnectorDNSError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorDNSError: Cannot connect to host gateway-us-east1-d.discord.gg:443 ssl:default [getaddrinfo failed]
+2025-03-11 01:26:11,868 - ERROR - Attempting a reconnect in 420.83s
+Traceback (most recent call last):
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\connector.py", line 1362, in _create_direct_connection
+    hosts = await self._resolve_host(host, port, traces=traces)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\connector.py", line 995, in _resolve_host
+    return await asyncio.shield(resolved_host_task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\connector.py", line 1026, in _resolve_host_with_throttle
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\resolver.py", line 36, in resolve
+    infos = await self._loop.getaddrinfo(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+    )
+    ^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\asyncio\base_events.py", line 934, in getaddrinfo
+    return await self.run_in_executor(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        None, getaddr_func, host, port, family, type, proto, flags)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\concurrent\futures\thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\socket.py", line 975, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\client.py", line 701, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\asyncio\tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\gateway.py", line 375, in from_client
+    socket = await client.http.ws_connect(str(url))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\http.py", line 554, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\client.py", line 1004, in _ws_connect
+    resp = await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+    ...<11 lines>...
+    )
+    ^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\client.py", line 703, in _request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        req, traces=traces, timeout=real_timeout
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\connector.py", line 548, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\connector.py", line 1056, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\aiohttp\connector.py", line 1368, in _create_direct_connection
+    raise ClientConnectorDNSError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorDNSError: Cannot connect to host gateway-us-east1-d.discord.gg:443 ssl:default [getaddrinfo failed]
+2025-03-11 16:46:29,406 - INFO - Shard ID None session has been invalidated.
+2025-03-11 16:50:46,884 - INFO - logging in using static token
+2025-03-11 16:50:48,152 - INFO - Shard ID None has connected to Gateway (Session ID: 1dc9fa3fe8b2aa33d54675c2f7553558).
+2025-03-11 16:50:50,165 - INFO - Logged in as anti-yappinator#0972 (ID: 1346984198023680121)
+2025-03-11 16:50:50,167 - INFO - Connected to guild: Testing Server (ID: 1346987972121071739)
+2025-03-11 16:51:40,912 - INFO - Allowed role set to Admin in Testing Server
+2025-03-11 16:52:19,219 - INFO - Target set: diomedes31 (ID: 995339176130134157) in guild Testing Server
+2025-03-11 17:08:29,329 - INFO - Connecting to voice...
+2025-03-11 17:08:29,331 - INFO - Starting voice handshake... (connection attempt 1)
+2025-03-11 17:08:29,515 - INFO - Voice handshake complete. Endpoint found: us-central1119.discord.media
+2025-03-11 17:08:30,102 - INFO - Voice connection complete.
+2025-03-11 17:15:03,899 - INFO - Shard ID None has successfully RESUMED session 1dc9fa3fe8b2aa33d54675c2f7553558.
+2025-03-11 17:18:52,949 - INFO - The voice handshake is being terminated for Channel ID 1346987972121071743 (Guild ID 1346987972121071739)
+2025-03-11 17:19:17,008 - INFO - logging in using static token
+2025-03-11 17:19:19,215 - INFO - Shard ID None has connected to Gateway (Session ID: 4912f4a18748301722ee1ee08de34c3e).
+2025-03-11 17:19:21,227 - INFO - Logged in as anti-yappinator#0972 (ID: 1346984198023680121)
+2025-03-11 17:19:21,228 - INFO - Connected to guild: Testing Server (ID: 1346987972121071739)
+2025-03-11 17:19:36,324 - INFO - Allowed role set to Admin in Testing Server
+2025-03-11 17:19:43,814 - INFO - Target set: diomedes31 (ID: 995339176130134157) in guild Testing Server
+2025-03-11 17:19:54,274 - INFO - Connecting to voice...
+2025-03-11 17:19:54,276 - INFO - Starting voice handshake... (connection attempt 1)
+2025-03-11 17:19:54,400 - INFO - Voice handshake complete. Endpoint found: us-central1119.discord.media
+2025-03-11 17:19:54,869 - INFO - Voice connection complete.
+2025-03-11 17:19:54,872 - INFO - Bot joined voice channel: General in Testing Server
+2025-03-11 17:24:08,531 - INFO - The voice handshake is being terminated for Channel ID 1346987972121071743 (Guild ID 1346987972121071739)
+2025-03-11 17:24:08,639 - WARNING - Bot was disconnected from {before.channel.name}
+2025-03-11 17:24:08,640 - ERROR - Failed to reconnect: {e}
+2025-03-11 17:38:30,648 - INFO - Shard ID None has successfully RESUMED session 4912f4a18748301722ee1ee08de34c3e.
+2025-03-11 17:41:34,991 - INFO - logging in using static token
+2025-03-11 17:41:36,939 - INFO - Shard ID None has connected to Gateway (Session ID: 3ffe819ec605a205e7b389855609d1b7).
+2025-03-11 17:41:38,962 - INFO - Logged in as anti-yappinator#0972 (ID: 1346984198023680121)
+2025-03-11 17:41:38,963 - INFO - Connected to guild: Testing Server (ID: 1346987972121071739)
+2025-03-11 17:41:57,647 - INFO - Allowed role set to Admin in Testing Server
+2025-03-11 17:43:09,338 - INFO - Target set: diomedes31 (ID: 995339176130134157) in guild Testing Server
+2025-03-11 17:46:28,674 - INFO - Connecting to voice...
+2025-03-11 17:46:28,676 - INFO - Starting voice handshake... (connection attempt 1)
+2025-03-11 17:46:28,783 - INFO - Voice handshake complete. Endpoint found: us-central6390.discord.media
+2025-03-11 17:46:29,154 - INFO - Voice connection complete.
+2025-03-11 17:51:26,308 - INFO - The voice handshake is being terminated for Channel ID 1346987972121071743 (Guild ID 1346987972121071739)
+2025-03-11 17:51:37,407 - INFO - logging in using static token
+2025-03-11 17:51:38,078 - INFO - Shard ID None has connected to Gateway (Session ID: 91a12d6513f2a770670b30b7149682f3).
+2025-03-11 17:51:40,100 - INFO - Logged in as anti-yappinator#0972 (ID: 1346984198023680121)
+2025-03-11 17:51:40,101 - INFO - Connected to guild: Testing Server (ID: 1346987972121071739)
+2025-03-11 17:51:53,759 - INFO - Allowed role set to Admin in Testing Server
+2025-03-11 17:51:59,385 - INFO - Target set: diomedes31 (ID: 995339176130134157) in guild Testing Server
+2025-03-11 17:52:05,048 - INFO - Connecting to voice...
+2025-03-11 17:52:05,048 - INFO - Starting voice handshake... (connection attempt 1)
+2025-03-11 17:52:05,168 - INFO - Voice handshake complete. Endpoint found: us-central6390.discord.media
+2025-03-11 17:52:05,550 - INFO - Voice connection complete.
+2025-03-11 17:52:05,553 - INFO - Bot joined voice channel: General in Testing Server
+2025-03-11 17:52:35,039 - INFO - The voice handshake is being terminated for Channel ID 1346987972121071743 (Guild ID 1346987972121071739)
+2025-03-11 17:52:46,404 - INFO - logging in using static token
+2025-03-11 17:52:47,385 - INFO - Shard ID None has connected to Gateway (Session ID: f9140455bcbcf09cb5c48211e8bbe9d2).
+2025-03-11 17:52:49,393 - INFO - Logged in as anti-yappinator#0972 (ID: 1346984198023680121)
+2025-03-11 17:52:49,394 - INFO - Connected to guild: Testing Server (ID: 1346987972121071739)
+2025-03-11 17:52:57,062 - INFO - Allowed role set to Admin in Testing Server
+2025-03-11 17:53:03,365 - INFO - Target set: diomedes31 (ID: 995339176130134157) in guild Testing Server
+2025-03-11 17:53:11,163 - INFO - Connecting to voice...
+2025-03-11 17:53:11,164 - INFO - Starting voice handshake... (connection attempt 1)
+2025-03-11 17:53:11,266 - INFO - Voice handshake complete. Endpoint found: us-central6390.discord.media
+2025-03-11 17:53:11,620 - INFO - Voice connection complete.
+2025-03-11 17:53:47,868 - INFO - The voice handshake is being terminated for Channel ID 1346987972121071743 (Guild ID 1346987972121071739)
+2025-03-11 18:19:38,102 - INFO - logging in using static token
+2025-03-11 18:19:39,206 - INFO - Shard ID None has connected to Gateway (Session ID: 36b3732e364b2d9c0af24834ea8adb4b).
+2025-03-11 18:19:41,230 - INFO - Logged in as anti-yappinator#0972 (ID: 1346984198023680121)
+2025-03-11 18:19:41,231 - INFO - Connected to guild: Testing Server (ID: 1346987972121071739)
+2025-03-11 18:20:09,454 - INFO - Allowed role set to Admin in Testing Server
+2025-03-11 18:20:19,651 - INFO - Target set: merlyn4433 (ID: 621453482771087380) in guild Testing Server
+2025-03-11 18:20:24,633 - INFO - Connecting to voice...
+2025-03-11 18:20:24,635 - INFO - Starting voice handshake... (connection attempt 1)
+2025-03-11 18:20:24,734 - INFO - Voice handshake complete. Endpoint found: us-central746.discord.media
+2025-03-11 18:20:25,137 - INFO - Voice connection complete.
+2025-03-11 18:21:19,746 - INFO - The voice handshake is being terminated for Channel ID 1346987972121071743 (Guild ID 1346987972121071739)
+2025-03-11 18:21:26,713 - INFO - logging in using static token
+2025-03-11 18:21:27,635 - INFO - Shard ID None has connected to Gateway (Session ID: e2d83b79f4964896907320839ca1f0e1).
+2025-03-11 18:21:29,656 - INFO - Logged in as anti-yappinator#0972 (ID: 1346984198023680121)
+2025-03-11 18:21:29,657 - INFO - Connected to guild: Testing Server (ID: 1346987972121071739)
+2025-03-11 18:21:43,206 - INFO - Allowed role set to Admin in Testing Server
+2025-03-11 18:21:53,737 - INFO - Target set: merlyn4433 (ID: 621453482771087380) in guild Testing Server
+2025-03-11 18:21:59,980 - INFO - Connecting to voice...
+2025-03-11 18:21:59,983 - INFO - Starting voice handshake... (connection attempt 1)
+2025-03-11 18:22:00,133 - INFO - Voice handshake complete. Endpoint found: us-central5039.discord.media
+2025-03-11 18:22:00,536 - INFO - Voice connection complete.
+2025-03-11 18:23:23,946 - INFO - The voice handshake is being terminated for Channel ID 1346987972121071743 (Guild ID 1346987972121071739)
+2025-03-11 18:24:34,868 - INFO - Connecting to voice...
+2025-03-11 18:24:34,870 - INFO - Starting voice handshake... (connection attempt 1)
+2025-03-11 18:24:35,000 - INFO - Voice handshake complete. Endpoint found: us-central2661.discord.media
+2025-03-11 18:24:35,395 - INFO - Voice connection complete.
+2025-03-11 18:24:54,177 - INFO - The voice handshake is being terminated for Channel ID 1346987972121071743 (Guild ID 1346987972121071739)
+2025-03-11 18:32:17,229 - INFO - logging in using static token
+2025-03-11 18:32:18,330 - INFO - Shard ID None has connected to Gateway (Session ID: fc85e4a243b3db399b0a820acfae008e).
+2025-03-11 18:32:20,338 - INFO - Logged in as anti-yappinator#0972 (ID: 1346984198023680121)
+2025-03-11 18:32:20,339 - INFO - Connected to guild: Testing Server (ID: 1346987972121071739)
+2025-03-11 18:32:29,037 - INFO - logging in using static token
+2025-03-11 18:32:29,906 - INFO - Shard ID None has connected to Gateway (Session ID: b1fd4185358695ddf7ef3319edeffa76).
+2025-03-11 18:32:31,911 - INFO - Logged in as anti-yappinator#0972 (ID: 1346984198023680121)
+2025-03-11 18:32:31,912 - INFO - Connected to guild: Testing Server (ID: 1346987972121071739)
+2025-03-11 18:32:55,052 - INFO - Allowed role set to Admin in Testing Server
+2025-03-11 18:33:02,653 - INFO - Target set: merlyn4433 (ID: 621453482771087380) in guild Testing Server
+2025-03-11 18:33:07,967 - INFO - Connecting to voice...
+2025-03-11 18:33:07,970 - INFO - Starting voice handshake... (connection attempt 1)
+2025-03-11 18:33:08,105 - INFO - Voice handshake complete. Endpoint found: us-central2976.discord.media
+2025-03-11 18:33:08,468 - INFO - Voice connection complete.
+2025-03-11 18:33:33,080 - INFO - The voice handshake is being terminated for Channel ID 1346987972121071743 (Guild ID 1346987972121071739)
+2025-03-11 18:38:10,149 - INFO - Allowed role set to Admin in Testing Server
+2025-03-11 18:38:24,518 - INFO - Target set: merlyn4433 (ID: 621453482771087380) in guild Testing Server
+2025-03-11 18:38:32,088 - INFO - Connecting to voice...
+2025-03-11 18:38:32,090 - INFO - Starting voice handshake... (connection attempt 1)
+2025-03-11 18:38:32,218 - INFO - Voice handshake complete. Endpoint found: us-central2529.discord.media
+2025-03-11 18:38:32,638 - INFO - Voice connection complete.
+2025-03-11 18:38:48,103 - INFO - The voice handshake is being terminated for Channel ID 1346987972121071743 (Guild ID 1346987972121071739)
+2025-03-11 19:03:28,613 - INFO - logging in using static token
+2025-03-11 19:03:29,357 - INFO - Shard ID None has connected to Gateway (Session ID: 0a781c5380f6d1d685e6b72c7596448c).
+2025-03-11 19:03:31,366 - INFO - Logged in as anti-yappinator#0972 (ID: 1346984198023680121)
+2025-03-11 19:04:01,681 - ERROR - Ignoring exception in command None
+discord.ext.commands.errors.CommandNotFound: Command "setrole" is not found
+2025-03-11 19:04:45,850 - INFO - Target set: merlyn4433 (ID: 621453482771087380) in guild Testing Server
+2025-03-11 19:04:50,967 - INFO - Connecting to voice...
+2025-03-11 19:04:50,968 - INFO - Starting voice handshake... (connection attempt 1)
+2025-03-11 19:04:51,093 - INFO - Voice handshake complete. Endpoint found: us-central6988.discord.media
+2025-03-11 19:04:51,493 - INFO - Voice connection complete.
+2025-03-11 19:04:51,495 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-17' coro=<VoiceActivityDetector.detect_audio() done, defined at c:\SchoolWork\Quarter5\Web Projects\anti-yapinator\bot.py:42> exception=AttributeError("'VoiceClient' object has no attribute 'recv'")>
+Traceback (most recent call last):
+  File "c:\SchoolWork\Quarter5\Web Projects\anti-yapinator\bot.py", line 45, in detect_audio
+    pcm_data = await self.voice_client.recv()
+                     ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'VoiceClient' object has no attribute 'recv'
+2025-03-11 19:05:25,201 - INFO - The voice handshake is being terminated for Channel ID 1346987972121071743 (Guild ID 1346987972121071739)
+2025-03-12 09:47:32,946 - INFO - logging in using static token
+2025-03-12 09:47:33,753 - INFO - Shard ID None has connected to Gateway (Session ID: 1cccebcb5ddf4ca013cebcc100de11b4).
+2025-03-12 09:47:35,773 - INFO - Logged in as anti-yappinator#0972 (ID: 1346984198023680121)
+2025-03-12 09:48:05,625 - INFO - Target set: merlyn4433 (ID: 621453482771087380) in guild Testing Server
+2025-03-12 09:48:12,933 - INFO - Connecting to voice...
+2025-03-12 09:48:12,934 - INFO - Starting voice handshake... (connection attempt 1)
+2025-03-12 09:48:13,077 - INFO - Voice handshake complete. Endpoint found: seattle3663.discord.media
+2025-03-12 09:48:13,421 - INFO - Voice connection complete.
+2025-03-12 09:48:13,424 - INFO - merlyn4433 is speaking in General
+2025-03-12 09:48:13,449 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-16' coro=<monitor_voice_activity() done, defined at c:\SchoolWork\Quarter5\Web Projects\anti-yapinator\bot.py:49> exception=ClientException('ffmpeg was not found.')>
+Traceback (most recent call last):
+  File "c:\SchoolWork\Quarter5\Web Projects\anti-yapinator\bot.py", line 61, in monitor_voice_activity
+    await play_alert(guild)
+  File "c:\SchoolWork\Quarter5\Web Projects\anti-yapinator\bot.py", line 43, in play_alert
+    source = discord.FFmpegPCMAudio(audio_path)
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\player.py", line 345, in __init__
+    super().__init__(source, executable=executable, args=args, **subprocess_kwargs)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\player.py", line 182, in __init__
+    self._process = self._spawn_process(args, **kwargs)
+                    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\player.py", line 208, in _spawn_process
+    raise ClientException(executable + ' was not found.') from None
+discord.errors.ClientException: ffmpeg was not found.
+2025-03-12 09:48:31,039 - INFO - The voice handshake is being terminated for Channel ID 1346987972121071743 (Guild ID 1346987972121071739)
+2025-03-12 09:52:54,064 - INFO - logging in using static token
+2025-03-12 09:52:54,807 - INFO - Shard ID None has connected to Gateway (Session ID: 291acb6672b181fcf7381f5422c87652).
+2025-03-12 09:52:56,818 - INFO - Logged in as anti-yappinator#0972 (ID: 1346984198023680121)
+2025-03-12 09:53:30,987 - INFO - Target set: merlyn4433 (ID: 621453482771087380) in guild Testing Server
+2025-03-12 09:53:34,301 - INFO - Connecting to voice...
+2025-03-12 09:53:34,303 - INFO - Starting voice handshake... (connection attempt 1)
+2025-03-12 09:53:34,639 - INFO - Voice handshake complete. Endpoint found: seattle2527.discord.media
+2025-03-12 09:53:35,007 - INFO - Voice connection complete.
+2025-03-12 09:53:35,010 - INFO - merlyn4433 is speaking in General
+2025-03-12 09:53:35,022 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-17' coro=<monitor_voice_activity() done, defined at c:\SchoolWork\Quarter5\Web Projects\anti-yapinator\bot.py:49> exception=ClientException('ffmpeg was not found.')>
+Traceback (most recent call last):
+  File "c:\SchoolWork\Quarter5\Web Projects\anti-yapinator\bot.py", line 61, in monitor_voice_activity
+    await play_alert(guild)
+  File "c:\SchoolWork\Quarter5\Web Projects\anti-yapinator\bot.py", line 43, in play_alert
+    source = discord.FFmpegPCMAudio(audio_path)
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\player.py", line 345, in __init__
+    super().__init__(source, executable=executable, args=args, **subprocess_kwargs)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\player.py", line 182, in __init__
+    self._process = self._spawn_process(args, **kwargs)
+                    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\player.py", line 208, in _spawn_process
+    raise ClientException(executable + ' was not found.') from None
+discord.errors.ClientException: ffmpeg was not found.
+2025-03-12 09:53:43,997 - INFO - The voice handshake is being terminated for Channel ID 1346987972121071743 (Guild ID 1346987972121071739)
+2025-03-12 10:35:43,463 - INFO - logging in using static token
+2025-03-12 10:35:44,419 - INFO - Shard ID None has connected to Gateway (Session ID: 73ed1fc4649ccb92caebc556e8f2d3c2).
+2025-03-12 10:35:46,426 - INFO - Logged in as anti-yappinator#0972 (ID: 1346984198023680121)
+2025-03-12 10:35:57,707 - INFO - Target set: merlyn4433 (ID: 621453482771087380) in guild Testing Server
+2025-03-12 10:36:00,486 - INFO - Connecting to voice...
+2025-03-12 10:36:00,489 - INFO - Starting voice handshake... (connection attempt 1)
+2025-03-12 10:36:00,841 - INFO - Voice handshake complete. Endpoint found: seattle7353.discord.media
+2025-03-12 10:36:01,280 - INFO - Voice connection complete.
+2025-03-12 10:36:01,283 - INFO - merlyn4433 is speaking in General
+2025-03-12 10:36:01,305 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-15' coro=<monitor_voice_activity() done, defined at c:\SchoolWork\Quarter5\Web Projects\anti-yapinator\bot.py:49> exception=ClientException('ffmpeg was not found.')>
+Traceback (most recent call last):
+  File "c:\SchoolWork\Quarter5\Web Projects\anti-yapinator\bot.py", line 61, in monitor_voice_activity
+    await play_alert(guild)
+  File "c:\SchoolWork\Quarter5\Web Projects\anti-yapinator\bot.py", line 43, in play_alert
+    source = discord.FFmpegPCMAudio(audio_path)
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\player.py", line 345, in __init__
+    super().__init__(source, executable=executable, args=args, **subprocess_kwargs)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\player.py", line 182, in __init__
+    self._process = self._spawn_process(args, **kwargs)
+                    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\player.py", line 208, in _spawn_process
+    raise ClientException(executable + ' was not found.') from None
+discord.errors.ClientException: ffmpeg was not found.
+2025-03-12 10:36:11,089 - INFO - The voice handshake is being terminated for Channel ID 1346987972121071743 (Guild ID 1346987972121071739)
+2025-03-12 11:05:02,708 - INFO - logging in using static token
+2025-03-12 11:05:03,593 - INFO - Shard ID None has connected to Gateway (Session ID: f69267beb7bcf29df5f126cbcf4cecb5).
+2025-03-12 11:05:05,607 - INFO - Logged in as anti-yappinator#0972 (ID: 1346984198023680121)
+2025-03-12 11:05:45,530 - INFO - Target set: merlyn4433 (ID: 621453482771087380) in guild Testing Server
+2025-03-12 11:05:59,783 - INFO - Connecting to voice...
+2025-03-12 11:05:59,786 - INFO - Starting voice handshake... (connection attempt 1)
+2025-03-12 11:06:00,160 - INFO - Voice handshake complete. Endpoint found: seattle8939.discord.media
+2025-03-12 11:06:01,116 - INFO - Voice connection complete.
+2025-03-12 11:06:01,120 - INFO - merlyn4433 is speaking in General
+2025-03-12 11:06:01,127 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-18' coro=<monitor_voice_activity() done, defined at c:\SchoolWork\Quarter5\Web Projects\anti-yapinator\bot.py:49> exception=PermissionError(13, 'Access is denied', None, 5, None)>
+Traceback (most recent call last):
+  File "c:\SchoolWork\Quarter5\Web Projects\anti-yapinator\bot.py", line 61, in monitor_voice_activity
+    await play_alert(guild)
+  File "c:\SchoolWork\Quarter5\Web Projects\anti-yapinator\bot.py", line 43, in play_alert
+    source = discord.FFmpegPCMAudio(audio_path, executable="C:\\Users\\Merlyn\\AppData\\Local\\Temp\\WinGet\\cache\\V2_M\\Microsoft.Winget.Source_8wekyb3d8bbwe\\manifests\\g\\Gyan\\FFmpeg\\7.1")
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\player.py", line 345, in __init__
+    super().__init__(source, executable=executable, args=args, **subprocess_kwargs)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\player.py", line 182, in __init__
+    self._process = self._spawn_process(args, **kwargs)
+                    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\player.py", line 205, in _spawn_process
+    process = subprocess.Popen(args, creationflags=CREATE_NO_WINDOW, **subprocess_kwargs)
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\subprocess.py", line 1036, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                        pass_fds, cwd, env,
+                        ^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+                        gid, gids, uid, umask,
+                        ^^^^^^^^^^^^^^^^^^^^^^
+                        start_new_session, process_group)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\subprocess.py", line 1548, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+                       ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+                             # no special security
+                             ^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+                             cwd,
+                             ^^^^
+                             startupinfo)
+                             ^^^^^^^^^^^^
+PermissionError: [WinError 5] Access is denied
+2025-03-12 11:06:43,624 - INFO - The voice handshake is being terminated for Channel ID 1346987972121071743 (Guild ID 1346987972121071739)
+2025-03-12 11:20:50,404 - INFO - logging in using static token
+2025-03-12 11:20:52,760 - INFO - Shard ID None has connected to Gateway (Session ID: 968481b32cfda64387ef2e2d01d06a20).
+2025-03-12 11:20:54,780 - INFO - Logged in as anti-yappinator#0972 (ID: 1346984198023680121)
+2025-03-12 11:21:26,770 - INFO - Target set: merlyn4433 (ID: 621453482771087380) in guild Testing Server
+2025-03-12 11:21:30,493 - INFO - Connecting to voice...
+2025-03-12 11:21:30,495 - INFO - Starting voice handshake... (connection attempt 1)
+2025-03-12 11:21:30,819 - INFO - Voice handshake complete. Endpoint found: seattle3108.discord.media
+2025-03-12 11:21:31,215 - INFO - Voice connection complete.
+2025-03-12 11:21:31,216 - INFO - merlyn4433 is speaking in General
+2025-03-12 11:21:31,520 - INFO - Played alert in Testing Server
+2025-03-12 11:21:31,523 - INFO - ffmpeg process 214672 successfully terminated with return code of 3221225781.
+2025-03-12 11:21:32,524 - INFO - merlyn4433 is speaking in General
+2025-03-12 11:21:32,537 - INFO - Played alert in Testing Server
+2025-03-12 11:21:32,592 - INFO - ffmpeg process 207332 successfully terminated with return code of 3221225781.
+2025-03-12 11:21:33,552 - INFO - merlyn4433 is speaking in General
+2025-03-12 11:21:33,561 - INFO - Played alert in Testing Server
+2025-03-12 11:21:33,613 - INFO - ffmpeg process 222032 successfully terminated with return code of 3221225781.
+2025-03-12 11:21:34,574 - INFO - merlyn4433 is speaking in General
+2025-03-12 11:21:34,579 - INFO - Played alert in Testing Server
+2025-03-12 11:21:34,639 - INFO - ffmpeg process 222596 successfully terminated with return code of 3221225781.
+2025-03-12 11:21:35,595 - INFO - merlyn4433 is speaking in General
+2025-03-12 11:21:35,603 - INFO - Played alert in Testing Server
+2025-03-12 11:21:35,653 - INFO - ffmpeg process 203820 successfully terminated with return code of 3221225781.
+2025-03-12 11:21:36,614 - INFO - merlyn4433 is speaking in General
+2025-03-12 11:21:36,627 - INFO - Played alert in Testing Server
+2025-03-12 11:21:36,679 - INFO - ffmpeg process 58340 successfully terminated with return code of 3221225781.
+2025-03-12 11:21:37,645 - INFO - merlyn4433 is speaking in General
+2025-03-12 11:21:37,661 - INFO - Played alert in Testing Server
+2025-03-12 11:21:37,770 - INFO - ffmpeg process 207280 successfully terminated with return code of 3221225781.
+2025-03-12 11:21:38,671 - INFO - merlyn4433 is speaking in General
+2025-03-12 11:21:38,684 - INFO - Played alert in Testing Server
+2025-03-12 11:21:38,752 - INFO - ffmpeg process 217148 successfully terminated with return code of 3221225781.
+2025-03-12 11:21:39,687 - INFO - merlyn4433 is speaking in General
+2025-03-12 11:21:39,698 - INFO - Played alert in Testing Server
+2025-03-12 11:21:39,778 - INFO - ffmpeg process 222896 successfully terminated with return code of 3221225781.
+2025-03-12 11:21:40,707 - INFO - merlyn4433 is speaking in General
+2025-03-12 11:21:40,712 - INFO - Played alert in Testing Server
+2025-03-12 11:21:40,755 - INFO - ffmpeg process 218648 successfully terminated with return code of 3221225781.
+2025-03-12 11:21:48,559 - INFO - The voice handshake is being terminated for Channel ID 1346987972121071743 (Guild ID 1346987972121071739)
+2025-03-12 11:24:15,048 - INFO - Connecting to voice...
+2025-03-12 11:24:15,051 - INFO - Starting voice handshake... (connection attempt 1)
+2025-03-12 11:24:15,202 - INFO - Voice handshake complete. Endpoint found: seattle2732.discord.media
+2025-03-12 11:24:16,305 - INFO - Voice connection complete.
+2025-03-12 11:24:16,307 - INFO - merlyn4433 is speaking in General
+2025-03-12 11:24:16,317 - INFO - Played alert in Testing Server
+2025-03-12 11:24:16,436 - INFO - ffmpeg process 215908 successfully terminated with return code of 3221225781.
+2025-03-12 11:24:17,327 - INFO - merlyn4433 is speaking in General
+2025-03-12 11:24:17,336 - INFO - Played alert in Testing Server
+2025-03-12 11:24:17,467 - INFO - ffmpeg process 216748 successfully terminated with return code of 3221225781.
+2025-03-12 11:24:18,349 - INFO - merlyn4433 is speaking in General
+2025-03-12 11:24:18,356 - INFO - Played alert in Testing Server
+2025-03-12 11:24:18,472 - INFO - ffmpeg process 203820 successfully terminated with return code of 3221225781.
+2025-03-12 11:24:19,364 - INFO - merlyn4433 is speaking in General
+2025-03-12 11:24:19,376 - INFO - Played alert in Testing Server
+2025-03-12 11:24:19,470 - INFO - ffmpeg process 217228 successfully terminated with return code of 3221225781.
+2025-03-12 11:24:20,391 - INFO - merlyn4433 is speaking in General
+2025-03-12 11:24:20,401 - INFO - Played alert in Testing Server
+2025-03-12 11:24:20,516 - INFO - ffmpeg process 187284 successfully terminated with return code of 3221225781.
+2025-03-12 11:24:21,415 - INFO - merlyn4433 is speaking in General
+2025-03-12 11:24:21,423 - INFO - Played alert in Testing Server
+2025-03-12 11:24:21,479 - INFO - ffmpeg process 212056 successfully terminated with return code of 3221225781.
+2025-03-12 11:24:22,426 - INFO - merlyn4433 is speaking in General
+2025-03-12 11:24:22,434 - INFO - Played alert in Testing Server
+2025-03-12 11:24:22,499 - INFO - ffmpeg process 215808 successfully terminated with return code of 3221225781.
+2025-03-12 11:24:23,439 - INFO - merlyn4433 is speaking in General
+2025-03-12 11:24:23,449 - INFO - Played alert in Testing Server
+2025-03-12 11:24:23,509 - INFO - ffmpeg process 220352 successfully terminated with return code of 3221225781.
+2025-03-12 11:24:24,465 - INFO - merlyn4433 is speaking in General
+2025-03-12 11:24:24,498 - INFO - Played alert in Testing Server
+2025-03-12 11:24:24,619 - INFO - ffmpeg process 68380 successfully terminated with return code of 3221225781.
+2025-03-12 11:24:25,503 - INFO - merlyn4433 is speaking in General
+2025-03-12 11:24:25,513 - INFO - Played alert in Testing Server
+2025-03-12 11:24:25,629 - INFO - ffmpeg process 207468 successfully terminated with return code of 3221225781.
+2025-03-12 11:24:26,524 - INFO - merlyn4433 is speaking in General
+2025-03-12 11:24:26,536 - INFO - Played alert in Testing Server
+2025-03-12 11:24:26,632 - INFO - ffmpeg process 199216 successfully terminated with return code of 3221225781.
+2025-03-12 11:24:33,342 - INFO - The voice handshake is being terminated for Channel ID 1346987972121071743 (Guild ID 1346987972121071739)
+2025-03-12 11:26:22,022 - INFO - logging in using static token
+2025-03-12 11:26:22,967 - INFO - Shard ID None has connected to Gateway (Session ID: f93ef4c646d55abb1d0618c75afd5c52).
+2025-03-12 11:26:24,981 - INFO - Logged in as anti-yappinator#0972 (ID: 1346984198023680121)
+2025-03-12 11:26:34,963 - INFO - Target set: merlyn4433 (ID: 621453482771087380) in guild Testing Server
+2025-03-12 11:26:38,283 - INFO - Connecting to voice...
+2025-03-12 11:26:38,286 - INFO - Starting voice handshake... (connection attempt 1)
+2025-03-12 11:26:38,595 - INFO - Voice handshake complete. Endpoint found: seattle1913.discord.media
+2025-03-12 11:26:38,941 - INFO - Voice connection complete.
+2025-03-12 11:26:38,944 - INFO - merlyn4433 is speaking in General
+2025-03-12 11:26:38,955 - INFO - Played alert in Testing Server
+2025-03-12 11:26:39,060 - INFO - Finished playing alert in Testing Server
+2025-03-12 11:26:39,062 - INFO - ffmpeg process 13084 successfully terminated with return code of 3221225781.
+2025-03-12 11:26:39,961 - INFO - merlyn4433 is speaking in General
+2025-03-12 11:26:39,970 - INFO - Played alert in Testing Server
+2025-03-12 11:26:40,216 - INFO - Finished playing alert in Testing Server
+2025-03-12 11:26:40,217 - INFO - ffmpeg process 214272 successfully terminated with return code of 3221225781.
+2025-03-12 11:26:40,987 - INFO - merlyn4433 is speaking in General
+2025-03-12 11:26:40,997 - INFO - Played alert in Testing Server
+2025-03-12 11:26:41,112 - INFO - Finished playing alert in Testing Server
+2025-03-12 11:26:41,113 - INFO - ffmpeg process 215848 successfully terminated with return code of 3221225781.
+2025-03-12 11:26:42,000 - INFO - merlyn4433 is speaking in General
+2025-03-12 11:26:42,011 - INFO - Played alert in Testing Server
+2025-03-12 11:26:42,112 - INFO - Finished playing alert in Testing Server
+2025-03-12 11:26:42,114 - INFO - ffmpeg process 202924 successfully terminated with return code of 3221225781.
+2025-03-12 11:26:43,027 - INFO - merlyn4433 is speaking in General
+2025-03-12 11:26:43,036 - INFO - Played alert in Testing Server
+2025-03-12 11:26:43,138 - INFO - Finished playing alert in Testing Server
+2025-03-12 11:26:43,141 - INFO - ffmpeg process 220008 successfully terminated with return code of 3221225781.
+2025-03-12 11:26:44,041 - INFO - merlyn4433 is speaking in General
+2025-03-12 11:26:44,051 - INFO - Played alert in Testing Server
+2025-03-12 11:26:44,188 - INFO - Finished playing alert in Testing Server
+2025-03-12 11:26:44,190 - INFO - ffmpeg process 203104 successfully terminated with return code of 3221225781.
+2025-03-12 11:26:45,055 - INFO - merlyn4433 is speaking in General
+2025-03-12 11:26:45,068 - INFO - Played alert in Testing Server
+2025-03-12 11:26:45,178 - INFO - Finished playing alert in Testing Server
+2025-03-12 11:26:45,181 - INFO - ffmpeg process 214296 successfully terminated with return code of 3221225781.
+2025-03-12 11:26:46,081 - INFO - merlyn4433 is speaking in General
+2025-03-12 11:26:46,094 - INFO - Played alert in Testing Server
+2025-03-12 11:26:46,204 - INFO - Finished playing alert in Testing Server
+2025-03-12 11:26:46,206 - INFO - ffmpeg process 219224 successfully terminated with return code of 3221225781.
+2025-03-12 11:26:47,097 - INFO - merlyn4433 is speaking in General
+2025-03-12 11:26:47,110 - INFO - Played alert in Testing Server
+2025-03-12 11:26:47,174 - INFO - Finished playing alert in Testing Server
+2025-03-12 11:26:47,175 - INFO - ffmpeg process 51180 successfully terminated with return code of 3221225781.
+2025-03-12 11:26:48,122 - INFO - merlyn4433 is speaking in General
+2025-03-12 11:26:48,158 - INFO - Played alert in Testing Server
+2025-03-12 11:26:48,313 - INFO - Finished playing alert in Testing Server
+2025-03-12 11:26:48,315 - INFO - ffmpeg process 207908 successfully terminated with return code of 3221225781.
+2025-03-12 11:37:27,195 - INFO - The voice handshake is being terminated for Channel ID 1346987972121071743 (Guild ID 1346987972121071739)
+2025-03-12 11:38:19,350 - INFO - logging in using static token
+2025-03-12 11:38:20,558 - INFO - Shard ID None has connected to Gateway (Session ID: 8c9b31d7f67ad1935dac74d8d47fb1d8).
+2025-03-12 11:38:22,565 - INFO - Logged in as anti-yappinator#0972 (ID: 1346984198023680121)
+2025-03-12 11:38:36,581 - INFO - Target set: merlyn4433 (ID: 621453482771087380) in guild Testing Server
+2025-03-12 11:38:40,524 - INFO - Connecting to voice...
+2025-03-12 11:38:40,526 - INFO - Starting voice handshake... (connection attempt 1)
+2025-03-12 11:38:40,681 - INFO - Voice handshake complete. Endpoint found: seattle3415.discord.media
+2025-03-12 11:38:41,082 - INFO - Voice connection complete.
+2025-03-12 11:38:41,084 - INFO - merlyn4433 is speaking in General
+2025-03-12 11:38:41,106 - INFO - Played alert in Testing Server
+2025-03-12 11:38:41,236 - INFO - Finished playing alert in Testing Server
+2025-03-12 11:38:41,239 - INFO - ffmpeg process 198476 successfully terminated with return code of 3221225781.
+2025-03-12 11:38:42,110 - INFO - merlyn4433 is speaking in General
+2025-03-12 11:38:42,126 - INFO - Played alert in Testing Server
+2025-03-12 11:38:42,256 - INFO - Finished playing alert in Testing Server
+2025-03-12 11:38:42,258 - INFO - ffmpeg process 221428 successfully terminated with return code of 3221225781.
+2025-03-12 11:38:43,129 - INFO - merlyn4433 is speaking in General
+2025-03-12 11:38:43,142 - INFO - Played alert in Testing Server
+2025-03-12 11:38:43,229 - INFO - Finished playing alert in Testing Server
+2025-03-12 11:38:43,231 - INFO - ffmpeg process 215384 successfully terminated with return code of 3221225781.
+2025-03-12 11:38:44,155 - INFO - merlyn4433 is speaking in General
+2025-03-12 11:38:44,169 - INFO - Played alert in Testing Server
+2025-03-12 11:38:44,290 - INFO - Finished playing alert in Testing Server
+2025-03-12 11:38:44,292 - INFO - ffmpeg process 220136 successfully terminated with return code of 3221225781.
+2025-03-12 11:38:45,171 - INFO - merlyn4433 is speaking in General
+2025-03-12 11:38:45,183 - INFO - Played alert in Testing Server
+2025-03-12 11:38:45,251 - INFO - Finished playing alert in Testing Server
+2025-03-12 11:38:45,253 - INFO - ffmpeg process 214996 successfully terminated with return code of 3221225781.
+2025-03-12 11:38:46,188 - INFO - merlyn4433 is speaking in General
+2025-03-12 11:38:46,196 - INFO - Played alert in Testing Server
+2025-03-12 11:38:46,280 - INFO - Finished playing alert in Testing Server
+2025-03-12 11:38:46,280 - INFO - ffmpeg process 222520 successfully terminated with return code of 3221225781.
+2025-03-12 11:38:47,199 - INFO - merlyn4433 is speaking in General
+2025-03-12 11:38:47,204 - INFO - Played alert in Testing Server
+2025-03-12 11:38:47,286 - INFO - Finished playing alert in Testing Server
+2025-03-12 11:38:47,288 - INFO - ffmpeg process 213248 successfully terminated with return code of 3221225781.
+2025-03-12 11:38:48,209 - INFO - merlyn4433 is speaking in General
+2025-03-12 11:38:48,223 - INFO - Played alert in Testing Server
+2025-03-12 11:38:48,387 - INFO - Finished playing alert in Testing Server
+2025-03-12 11:38:48,388 - INFO - ffmpeg process 177804 successfully terminated with return code of 3221225781.
+2025-03-12 11:38:49,233 - INFO - merlyn4433 is speaking in General
+2025-03-12 11:38:49,244 - INFO - Played alert in Testing Server
+2025-03-12 11:38:49,312 - INFO - Finished playing alert in Testing Server
+2025-03-12 11:38:49,314 - INFO - ffmpeg process 207336 successfully terminated with return code of 3221225781.
+2025-03-12 11:38:50,251 - INFO - merlyn4433 is speaking in General
+2025-03-12 11:38:50,266 - INFO - Played alert in Testing Server
+2025-03-12 11:38:50,333 - INFO - Finished playing alert in Testing Server
+2025-03-12 11:38:50,335 - INFO - ffmpeg process 220388 successfully terminated with return code of 3221225781.
+2025-03-12 11:38:51,280 - INFO - merlyn4433 is speaking in General
+2025-03-12 11:38:51,293 - INFO - Played alert in Testing Server
+2025-03-12 11:38:51,392 - INFO - Finished playing alert in Testing Server
+2025-03-12 11:38:51,394 - INFO - ffmpeg process 216508 successfully terminated with return code of 3221225781.
+2025-03-12 11:38:52,298 - INFO - merlyn4433 is speaking in General
+2025-03-12 11:38:52,312 - INFO - Played alert in Testing Server
+2025-03-12 11:38:52,391 - INFO - Finished playing alert in Testing Server
+2025-03-12 11:38:52,392 - INFO - ffmpeg process 9840 successfully terminated with return code of 3221225781.
+2025-03-12 11:38:53,321 - INFO - merlyn4433 is speaking in General
+2025-03-12 11:38:53,345 - INFO - Played alert in Testing Server
+2025-03-12 11:38:53,504 - INFO - Finished playing alert in Testing Server
+2025-03-12 11:38:53,506 - INFO - ffmpeg process 213316 successfully terminated with return code of 3221225781.
+2025-03-12 11:38:59,785 - INFO - The voice handshake is being terminated for Channel ID 1346987972121071743 (Guild ID 1346987972121071739)
+2025-03-12 11:46:03,343 - INFO - logging in using static token
+2025-03-12 11:46:05,040 - INFO - Shard ID None has connected to Gateway (Session ID: f05fe79e2277980801fe5e6c95d72739).
+2025-03-12 11:46:07,067 - INFO - Logged in as anti-yappinator#0972 (ID: 1346984198023680121)
+2025-03-12 11:46:58,750 - INFO - Target set: merlyn4433 (ID: 621453482771087380) in guild Testing Server
+2025-03-12 11:47:29,073 - INFO - Connecting to voice...
+2025-03-12 11:47:29,075 - INFO - Starting voice handshake... (connection attempt 1)
+2025-03-12 11:47:29,381 - INFO - Voice handshake complete. Endpoint found: seattle1430.discord.media
+2025-03-12 11:47:29,754 - INFO - Voice connection complete.
+2025-03-12 11:47:29,757 - INFO - merlyn4433 is speaking in General
+2025-03-12 11:47:29,798 - INFO - Played alert in Testing Server
+2025-03-12 11:47:29,918 - INFO - Finished playing alert in Testing Server
+2025-03-12 11:47:29,921 - INFO - ffmpeg process 212840 successfully terminated with return code of 3221225781.
+2025-03-12 11:47:30,811 - INFO - merlyn4433 is speaking in General
+2025-03-12 11:47:30,825 - INFO - Played alert in Testing Server
+2025-03-12 11:47:30,945 - INFO - Finished playing alert in Testing Server
+2025-03-12 11:47:30,947 - INFO - ffmpeg process 206836 successfully terminated with return code of 3221225781.
+2025-03-12 11:47:31,839 - INFO - merlyn4433 is speaking in General
+2025-03-12 11:47:31,852 - INFO - Played alert in Testing Server
+2025-03-12 11:47:31,962 - INFO - Finished playing alert in Testing Server
+2025-03-12 11:47:31,965 - INFO - ffmpeg process 219480 successfully terminated with return code of 3221225781.
+2025-03-12 11:47:32,866 - INFO - merlyn4433 is speaking in General
+2025-03-12 11:47:32,879 - INFO - Played alert in Testing Server
+2025-03-12 11:47:32,974 - INFO - Finished playing alert in Testing Server
+2025-03-12 11:47:32,976 - INFO - ffmpeg process 194820 successfully terminated with return code of 3221225781.
+2025-03-12 11:47:33,892 - INFO - merlyn4433 is speaking in General
+2025-03-12 11:47:33,906 - INFO - Played alert in Testing Server
+2025-03-12 11:47:33,975 - INFO - Finished playing alert in Testing Server
+2025-03-12 11:47:33,976 - INFO - ffmpeg process 219304 successfully terminated with return code of 3221225781.
+2025-03-12 11:47:34,916 - INFO - merlyn4433 is speaking in General
+2025-03-12 11:47:34,955 - INFO - Played alert in Testing Server
+2025-03-12 11:47:35,030 - INFO - Finished playing alert in Testing Server
+2025-03-12 11:47:35,032 - INFO - ffmpeg process 212276 successfully terminated with return code of 3221225781.
+2025-03-12 11:47:35,968 - INFO - merlyn4433 is speaking in General
+2025-03-12 11:47:35,984 - INFO - Played alert in Testing Server
+2025-03-12 11:47:36,069 - INFO - Finished playing alert in Testing Server
+2025-03-12 11:47:36,071 - INFO - ffmpeg process 220224 successfully terminated with return code of 3221225781.
+2025-03-12 11:47:36,994 - INFO - merlyn4433 is speaking in General
+2025-03-12 11:47:37,027 - INFO - Played alert in Testing Server
+2025-03-12 11:47:37,087 - INFO - Finished playing alert in Testing Server
+2025-03-12 11:47:37,089 - INFO - ffmpeg process 215768 successfully terminated with return code of 3221225781.
+2025-03-12 11:47:38,043 - INFO - merlyn4433 is speaking in General
+2025-03-12 11:47:38,065 - INFO - Played alert in Testing Server
+2025-03-12 11:47:38,128 - INFO - Finished playing alert in Testing Server
+2025-03-12 11:47:38,130 - INFO - ffmpeg process 214248 successfully terminated with return code of 3221225781.
+2025-03-12 11:47:39,083 - INFO - merlyn4433 is speaking in General
+2025-03-12 11:47:39,095 - INFO - Played alert in Testing Server
+2025-03-12 11:47:39,156 - INFO - Finished playing alert in Testing Server
+2025-03-12 11:47:39,157 - INFO - ffmpeg process 215384 successfully terminated with return code of 3221225781.
+2025-03-12 11:47:40,110 - INFO - merlyn4433 is speaking in General
+2025-03-12 11:47:40,125 - INFO - Played alert in Testing Server
+2025-03-12 11:47:40,224 - INFO - Finished playing alert in Testing Server
+2025-03-12 11:47:40,226 - INFO - ffmpeg process 217056 successfully terminated with return code of 3221225781.
+2025-03-12 11:47:44,700 - INFO - The voice handshake is being terminated for Channel ID 1346987972121071743 (Guild ID 1346987972121071739)
+2025-03-12 13:12:40,559 - INFO - Shard ID None session has been invalidated.
+2025-03-12 13:12:45,957 - INFO - Shard ID None has connected to Gateway (Session ID: a08898fd7fcd87ede6083d6ffb27c113).
+2025-03-12 13:12:47,971 - INFO - Logged in as anti-yappinator#0972 (ID: 1346984198023680121)
+2025-03-12 13:16:13,061 - INFO - logging in using static token
+2025-03-12 13:16:14,061 - INFO - Shard ID None has connected to Gateway (Session ID: 9ad4c7d595c63c14ec7907d3281cb03c).
+2025-03-12 13:16:16,084 - INFO - Logged in as anti-yappinator#0972 (ID: 1346984198023680121)
+2025-03-12 13:16:31,674 - INFO - Target set: merlyn4433 (ID: 621453482771087380) in guild Testing Server
+2025-03-12 13:16:58,548 - INFO - Connecting to voice...
+2025-03-12 13:16:58,551 - INFO - Starting voice handshake... (connection attempt 1)
+2025-03-12 13:16:58,767 - INFO - Voice handshake complete. Endpoint found: us-west4971.discord.media
+2025-03-12 13:16:59,144 - INFO - Voice connection complete.
+2025-03-12 13:16:59,147 - INFO - merlyn4433 is speaking in General
+2025-03-12 13:16:59,148 - ERROR - Bot is not connected to a voice channel.
+2025-03-12 13:17:00,157 - INFO - merlyn4433 is speaking in General
+2025-03-12 13:17:00,158 - ERROR - Bot is not connected to a voice channel.
+2025-03-12 13:17:01,160 - INFO - merlyn4433 is speaking in General
+2025-03-12 13:17:01,161 - ERROR - Bot is not connected to a voice channel.
+2025-03-12 13:17:02,177 - INFO - merlyn4433 is speaking in General
+2025-03-12 13:17:02,179 - ERROR - Bot is not connected to a voice channel.
+2025-03-12 13:17:03,187 - INFO - merlyn4433 is speaking in General
+2025-03-12 13:17:03,188 - ERROR - Bot is not connected to a voice channel.
+2025-03-12 13:17:04,200 - INFO - merlyn4433 is speaking in General
+2025-03-12 13:17:04,201 - ERROR - Bot is not connected to a voice channel.
+2025-03-12 13:17:05,212 - INFO - merlyn4433 is speaking in General
+2025-03-12 13:17:05,214 - ERROR - Bot is not connected to a voice channel.
+2025-03-12 13:17:06,225 - INFO - merlyn4433 is speaking in General
+2025-03-12 13:17:06,227 - ERROR - Bot is not connected to a voice channel.
+2025-03-12 13:17:13,910 - INFO - The voice handshake is being terminated for Channel ID 1346987972121071743 (Guild ID 1346987972121071739)
+2025-03-12 13:23:37,121 - INFO - logging in using static token
+2025-03-12 13:23:38,011 - INFO - Shard ID None has connected to Gateway (Session ID: 03bbb1805a4ca824e9c8b002ba6fef28).
+2025-03-12 13:23:40,020 - INFO - Logged in as anti-yappinator#0972 (ID: 1346984198023680121)
+2025-03-12 13:24:08,649 - INFO - Target set: merlyn4433 (ID: 621453482771087380) in guild Testing Server
+2025-03-12 13:24:12,074 - INFO - Connecting to voice...
+2025-03-12 13:24:12,075 - INFO - Starting voice handshake... (connection attempt 1)
+2025-03-12 13:24:12,242 - INFO - Voice handshake complete. Endpoint found: us-west8578.discord.media
+2025-03-12 13:24:12,691 - INFO - Voice connection complete.
+2025-03-12 13:24:12,692 - INFO - Reconnected to voice channel: General
+2025-03-12 13:24:12,693 - INFO - merlyn4433 is speaking in General
+2025-03-12 13:24:12,693 - ERROR - Bot is not connected to a voice channel.
+2025-03-12 13:24:13,702 - INFO - merlyn4433 is speaking in General
+2025-03-12 13:24:13,704 - ERROR - Bot is not connected to a voice channel.
+2025-03-12 13:24:14,714 - INFO - merlyn4433 is speaking in General
+2025-03-12 13:24:14,717 - ERROR - Bot is not connected to a voice channel.
+2025-03-12 13:24:15,722 - INFO - merlyn4433 is speaking in General
+2025-03-12 13:24:15,724 - ERROR - Bot is not connected to a voice channel.
+2025-03-12 13:24:16,730 - INFO - merlyn4433 is speaking in General
+2025-03-12 13:24:16,731 - ERROR - Bot is not connected to a voice channel.
+2025-03-12 13:24:17,737 - INFO - merlyn4433 is speaking in General
+2025-03-12 13:24:17,737 - ERROR - Bot is not connected to a voice channel.
+2025-03-12 13:24:18,740 - INFO - merlyn4433 is speaking in General
+2025-03-12 13:24:18,741 - ERROR - Bot is not connected to a voice channel.
+2025-03-12 13:24:19,757 - INFO - merlyn4433 is speaking in General
+2025-03-12 13:24:19,758 - ERROR - Bot is not connected to a voice channel.
+2025-03-12 13:24:26,285 - INFO - The voice handshake is being terminated for Channel ID 1346987972121071743 (Guild ID 1346987972121071739)
+2025-03-12 13:34:05,984 - INFO - logging in using static token
+2025-03-12 13:34:06,959 - INFO - Shard ID None has connected to Gateway (Session ID: d2acbaca9a6d5170c8fc3090bfa31f44).
+2025-03-12 13:34:08,974 - INFO - Logged in as anti-yappinator#0972 (ID: 1346984198023680121)
+2025-03-12 13:35:39,870 - INFO - Target set: merlyn4433 (ID: 621453482771087380) in guild Testing Server
+2025-03-12 13:35:42,990 - INFO - Connecting to voice...
+2025-03-12 13:35:42,992 - INFO - Starting voice handshake... (connection attempt 1)
+2025-03-12 13:35:43,154 - INFO - Voice handshake complete. Endpoint found: us-west11001.discord.media
+2025-03-12 13:35:43,447 - INFO - Voice connection complete.
+2025-03-12 13:35:43,450 - INFO - Bot joined voice channel: General
+2025-03-12 13:35:43,451 - INFO - merlyn4433 is speaking in General
+2025-03-12 13:35:43,452 - ERROR - Bot is not connected to a voice channel.
+2025-03-12 13:35:44,454 - INFO - merlyn4433 is speaking in General
+2025-03-12 13:35:44,455 - ERROR - Bot is not connected to a voice channel.
+2025-03-12 13:35:45,469 - INFO - merlyn4433 is speaking in General
+2025-03-12 13:35:45,471 - ERROR - Bot is not connected to a voice channel.
+2025-03-12 13:35:46,475 - INFO - merlyn4433 is speaking in General
+2025-03-12 13:35:46,476 - ERROR - Bot is not connected to a voice channel.
+2025-03-12 13:35:47,481 - INFO - merlyn4433 is speaking in General
+2025-03-12 13:35:47,482 - ERROR - Bot is not connected to a voice channel.
+2025-03-12 13:35:48,491 - INFO - merlyn4433 is speaking in General
+2025-03-12 13:35:48,493 - ERROR - Bot is not connected to a voice channel.
+2025-03-12 13:35:49,502 - INFO - merlyn4433 is speaking in General
+2025-03-12 13:35:49,503 - ERROR - Bot is not connected to a voice channel.
+2025-03-12 13:35:50,516 - INFO - merlyn4433 is speaking in General
+2025-03-12 13:35:50,518 - ERROR - Bot is not connected to a voice channel.
+2025-03-12 13:35:51,522 - INFO - merlyn4433 is speaking in General
+2025-03-12 13:35:51,523 - ERROR - Bot is not connected to a voice channel.
+2025-03-12 13:35:52,532 - INFO - merlyn4433 is speaking in General
+2025-03-12 13:35:52,534 - ERROR - Bot is not connected to a voice channel.
+2025-03-12 13:35:59,313 - INFO - The voice handshake is being terminated for Channel ID 1346987972121071743 (Guild ID 1346987972121071739)
+2025-03-12 13:50:23,992 - WARNING - Shard ID None has stopped responding to the gateway. Closing and restarting.
+2025-03-12 13:50:24,195 - INFO - Shard ID None session has been invalidated.
+2025-03-12 13:50:29,530 - INFO - Shard ID None has connected to Gateway (Session ID: 3b505a7ed2b4fec819a5e6fbdf07af60).
+2025-03-12 13:50:31,547 - INFO - Logged in as anti-yappinator#0972 (ID: 1346984198023680121)
+2025-03-12 14:11:07,028 - INFO - Target set: merlyn4433 (ID: 621453482771087380) in guild Testing Server
+2025-03-12 14:11:11,738 - INFO - Connecting to voice...
+2025-03-12 14:11:11,739 - INFO - Starting voice handshake... (connection attempt 1)
+2025-03-12 14:11:11,913 - INFO - Voice handshake complete. Endpoint found: us-west6487.discord.media
+2025-03-12 14:11:12,256 - INFO - Voice connection complete.
+2025-03-12 14:11:12,258 - INFO - Bot joined voice channel: General
+2025-03-12 14:11:12,259 - INFO - merlyn4433 is speaking in General
+2025-03-12 14:11:12,259 - ERROR - Bot is not connected to a voice channel.
+2025-03-12 14:11:13,268 - INFO - merlyn4433 is speaking in General
+2025-03-12 14:11:13,270 - ERROR - Bot is not connected to a voice channel.
+2025-03-12 14:11:14,280 - INFO - merlyn4433 is speaking in General
+2025-03-12 14:11:14,281 - ERROR - Bot is not connected to a voice channel.
+2025-03-12 14:11:15,291 - INFO - merlyn4433 is speaking in General
+2025-03-12 14:11:15,292 - ERROR - Bot is not connected to a voice channel.
+2025-03-12 14:11:16,300 - INFO - merlyn4433 is speaking in General
+2025-03-12 14:11:16,302 - ERROR - Bot is not connected to a voice channel.
+2025-03-12 14:11:17,310 - INFO - merlyn4433 is speaking in General
+2025-03-12 14:11:17,311 - ERROR - Bot is not connected to a voice channel.
+2025-03-12 14:11:18,316 - INFO - merlyn4433 is speaking in General
+2025-03-12 14:11:18,317 - ERROR - Bot is not connected to a voice channel.
+2025-03-12 14:11:19,325 - INFO - merlyn4433 is speaking in General
+2025-03-12 14:11:19,326 - ERROR - Bot is not connected to a voice channel.
+2025-03-12 14:11:24,681 - INFO - The voice handshake is being terminated for Channel ID 1346987972121071743 (Guild ID 1346987972121071739)
+2025-03-12 14:14:41,884 - INFO - logging in using static token
+2025-03-12 14:14:42,987 - INFO - Shard ID None has connected to Gateway (Session ID: a479904d2a5924a242c2599f8731cdfd).
+2025-03-12 14:14:44,993 - INFO - Logged in as anti-yappinator#0972 (ID: 1346984198023680121)
+2025-03-12 14:15:03,674 - INFO - Target set: merlyn4433 (ID: 621453482771087380) in guild Testing Server
+2025-03-12 14:15:22,236 - INFO - Connecting to voice...
+2025-03-12 14:15:22,237 - INFO - Starting voice handshake... (connection attempt 1)
+2025-03-12 14:15:22,382 - INFO - Voice handshake complete. Endpoint found: us-west1119.discord.media
+2025-03-12 14:15:22,651 - INFO - Voice connection complete.
+2025-03-12 14:15:22,652 - INFO - Joined voice channel: General
+2025-03-12 14:15:22,652 - INFO - Monitoring voice activity in General
+2025-03-12 14:15:22,652 - INFO - merlyn4433 is speaking in General
+2025-03-12 14:15:22,670 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-16' coro=<monitor_voice_activity() done, defined at c:\SchoolWork\Quarter5\Web Projects\anti-yapinator\bot.py:54> exception=ClientException('ffmpeg was not found.')>
+Traceback (most recent call last):
+  File "c:\SchoolWork\Quarter5\Web Projects\anti-yapinator\bot.py", line 74, in monitor_voice_activity
+    await play_alert(guild)
+  File "c:\SchoolWork\Quarter5\Web Projects\anti-yapinator\bot.py", line 48, in play_alert
+    source = discord.FFmpegPCMAudio(audio_path)
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\player.py", line 345, in __init__
+    super().__init__(source, executable=executable, args=args, **subprocess_kwargs)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\player.py", line 182, in __init__
+    self._process = self._spawn_process(args, **kwargs)
+                    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\Merlyn\AppData\Local\Programs\Python\Python313\Lib\site-packages\discord\player.py", line 208, in _spawn_process
+    raise ClientException(executable + ' was not found.') from None
+discord.errors.ClientException: ffmpeg was not found.
+2025-03-12 14:17:08,448 - INFO - The voice handshake is being terminated for Channel ID 1346987972121071743 (Guild ID 1346987972121071739)
+2025-03-12 14:17:58,594 - INFO - logging in using static token
+2025-03-12 14:17:59,668 - INFO - Shard ID None has connected to Gateway (Session ID: b3e4735b1c9359ac41051133c88c5671).
+2025-03-12 14:18:01,677 - INFO - Logged in as anti-yappinator#0972 (ID: 1346984198023680121)
+2025-03-12 14:18:16,516 - INFO - Target set: merlyn4433 (ID: 621453482771087380) in guild Testing Server
+2025-03-12 14:18:26,013 - INFO - Connecting to voice...
+2025-03-12 14:18:26,015 - INFO - Starting voice handshake... (connection attempt 1)
+2025-03-12 14:18:26,161 - INFO - Voice handshake complete. Endpoint found: us-west11002.discord.media
+2025-03-12 14:18:26,396 - INFO - Voice connection complete.
+2025-03-12 14:18:26,399 - INFO - Joined voice channel: General
+2025-03-12 14:18:26,401 - INFO - Monitoring voice activity in General
+2025-03-12 14:18:26,402 - INFO - merlyn4433 is speaking in General
+2025-03-12 14:18:26,429 - INFO - Played alert in Testing Server
+2025-03-12 14:18:26,498 - INFO - Finished playing alert in Testing Server
+2025-03-12 14:18:26,501 - INFO - ffmpeg process 224580 successfully terminated with return code of 3221225781.
+2025-03-12 14:18:27,444 - INFO - Monitoring voice activity in General
+2025-03-12 14:18:27,445 - INFO - merlyn4433 is speaking in General
+2025-03-12 14:18:27,455 - INFO - Played alert in Testing Server
+2025-03-12 14:18:27,491 - INFO - Finished playing alert in Testing Server
+2025-03-12 14:18:27,492 - INFO - ffmpeg process 223548 successfully terminated with return code of 3221225781.
+2025-03-12 14:18:28,463 - INFO - Monitoring voice activity in General
+2025-03-12 14:18:28,465 - INFO - merlyn4433 is speaking in General
+2025-03-12 14:18:28,473 - INFO - Played alert in Testing Server
+2025-03-12 14:18:28,531 - INFO - Finished playing alert in Testing Server
+2025-03-12 14:18:28,532 - INFO - ffmpeg process 223400 successfully terminated with return code of 3221225781.
+2025-03-12 14:18:29,485 - INFO - Monitoring voice activity in General
+2025-03-12 14:18:29,486 - INFO - merlyn4433 is speaking in General
+2025-03-12 14:18:29,494 - INFO - Played alert in Testing Server
+2025-03-12 14:18:29,530 - INFO - Finished playing alert in Testing Server
+2025-03-12 14:18:29,532 - INFO - ffmpeg process 214484 successfully terminated with return code of 3221225781.
+2025-03-12 14:18:30,504 - INFO - Monitoring voice activity in General
+2025-03-12 14:18:30,505 - INFO - merlyn4433 is speaking in General
+2025-03-12 14:18:30,510 - INFO - Played alert in Testing Server
+2025-03-12 14:18:30,546 - INFO - Finished playing alert in Testing Server
+2025-03-12 14:18:30,547 - INFO - ffmpeg process 177804 successfully terminated with return code of 3221225781.
+2025-03-12 14:18:31,515 - INFO - Monitoring voice activity in General
+2025-03-12 14:18:31,516 - INFO - merlyn4433 is speaking in General
+2025-03-12 14:18:31,537 - INFO - Played alert in Testing Server
+2025-03-12 14:18:31,610 - INFO - Finished playing alert in Testing Server
+2025-03-12 14:18:31,610 - INFO - ffmpeg process 224236 successfully terminated with return code of 3221225781.
+2025-03-12 14:18:32,540 - INFO - Monitoring voice activity in General
+2025-03-12 14:18:32,541 - INFO - merlyn4433 is speaking in General
+2025-03-12 14:18:32,549 - INFO - Played alert in Testing Server
+2025-03-12 14:18:32,629 - INFO - Finished playing alert in Testing Server
+2025-03-12 14:18:32,631 - INFO - ffmpeg process 221896 successfully terminated with return code of 3221225781.
+2025-03-12 14:18:33,561 - INFO - Monitoring voice activity in General
+2025-03-12 14:18:33,562 - INFO - merlyn4433 is speaking in General
+2025-03-12 14:18:33,574 - INFO - Played alert in Testing Server
+2025-03-12 14:18:33,598 - INFO - Finished playing alert in Testing Server
+2025-03-12 14:18:33,599 - INFO - ffmpeg process 215060 successfully terminated with return code of 3221225781.
+2025-03-12 14:18:34,582 - INFO - Monitoring voice activity in General
+2025-03-12 14:18:34,583 - INFO - merlyn4433 is speaking in General
+2025-03-12 14:18:34,593 - INFO - Played alert in Testing Server
+2025-03-12 14:18:34,637 - INFO - Finished playing alert in Testing Server
+2025-03-12 14:18:34,639 - INFO - ffmpeg process 201120 successfully terminated with return code of 3221225781.
+2025-03-12 14:18:35,607 - INFO - Monitoring voice activity in General
+2025-03-12 14:18:35,609 - INFO - merlyn4433 is speaking in General
+2025-03-12 14:18:35,618 - INFO - Played alert in Testing Server
+2025-03-12 14:18:35,665 - INFO - Finished playing alert in Testing Server
+2025-03-12 14:18:35,666 - INFO - ffmpeg process 224164 successfully terminated with return code of 3221225781.
+2025-03-12 14:18:36,631 - INFO - Monitoring voice activity in General
+2025-03-12 14:18:36,633 - INFO - merlyn4433 is speaking in General
+2025-03-12 14:18:36,642 - INFO - Played alert in Testing Server
+2025-03-12 14:18:36,716 - INFO - Finished playing alert in Testing Server
+2025-03-12 14:18:36,717 - INFO - ffmpeg process 207328 successfully terminated with return code of 3221225781.
+2025-03-12 14:18:37,645 - INFO - Monitoring voice activity in General
+2025-03-12 14:18:37,647 - INFO - merlyn4433 is speaking in General
+2025-03-12 14:18:37,655 - INFO - Played alert in Testing Server
+2025-03-12 14:18:37,736 - INFO - Finished playing alert in Testing Server
+2025-03-12 14:18:37,739 - INFO - ffmpeg process 196324 successfully terminated with return code of 3221225781.
+2025-03-12 14:18:38,669 - INFO - Monitoring voice activity in General
+2025-03-12 14:18:38,670 - INFO - merlyn4433 is speaking in General
+2025-03-12 14:18:38,676 - INFO - Played alert in Testing Server
+2025-03-12 14:18:38,729 - INFO - Finished playing alert in Testing Server
+2025-03-12 14:18:38,731 - INFO - ffmpeg process 214388 successfully terminated with return code of 3221225781.
+2025-03-12 14:18:39,680 - INFO - Monitoring voice activity in General
+2025-03-12 14:18:40,690 - INFO - Monitoring voice activity in General
+2025-03-12 14:18:41,699 - INFO - Monitoring voice activity in General
+2025-03-12 14:18:42,710 - INFO - Monitoring voice activity in General
+2025-03-12 14:18:43,719 - INFO - Monitoring voice activity in General
+2025-03-12 14:18:44,733 - INFO - Monitoring voice activity in General
+2025-03-12 14:18:45,739 - INFO - Monitoring voice activity in General
+2025-03-12 14:18:45,975 - INFO - The voice handshake is being terminated for Channel ID 1346987972121071743 (Guild ID 1346987972121071739)
+2025-03-12 14:18:46,744 - WARNING - Bot lost connection or is not in a voice channel in Testing Server
+2025-03-12 14:18:49,749 - WARNING - Bot lost connection or is not in a voice channel in Testing Server
+2025-03-12 14:18:52,761 - WARNING - Bot lost connection or is not in a voice channel in Testing Server
+2025-03-12 14:18:55,765 - WARNING - Bot lost connection or is not in a voice channel in Testing Server
+2025-03-12 14:49:45,803 - INFO - logging in using static token
+2025-03-12 14:49:51,713 - INFO - Shard ID None has connected to Gateway (Session ID: 045280418b1cb5d5ca4efdc4a9094436).
+2025-03-12 14:49:53,727 - INFO - Logged in as anti-yappinator#0972 (ID: 1346984198023680121)
+2025-03-12 14:50:16,719 - INFO - Target set: merlyn4433 (ID: 621453482771087380) in guild Testing Server
+2025-03-12 14:50:26,899 - INFO - Connecting to voice...
+2025-03-12 14:50:26,900 - INFO - Starting voice handshake... (connection attempt 1)
+2025-03-12 14:50:27,077 - INFO - Voice handshake complete. Endpoint found: us-west2642.discord.media
+2025-03-12 14:50:27,381 - INFO - Voice connection complete.
+2025-03-12 14:50:27,384 - INFO - Joined voice channel: General
+2025-03-12 14:50:27,385 - INFO - Monitoring voice activity in General
+2025-03-12 14:50:27,386 - INFO - merlyn4433 is speaking in General
+2025-03-12 14:50:27,418 - INFO - Played alert in Testing Server
+2025-03-12 14:50:28,428 - INFO - Monitoring voice activity in General
+2025-03-12 14:50:28,429 - INFO - merlyn4433 is speaking in General
+2025-03-12 14:50:29,434 - INFO - Monitoring voice activity in General
+2025-03-12 14:50:29,436 - INFO - merlyn4433 is speaking in General
+2025-03-12 14:50:30,440 - INFO - Monitoring voice activity in General
+2025-03-12 14:50:30,441 - INFO - merlyn4433 is speaking in General
+2025-03-12 14:50:31,446 - INFO - Monitoring voice activity in General
+2025-03-12 14:50:31,448 - INFO - merlyn4433 is speaking in General
+2025-03-12 14:50:31,480 - INFO - Finished playing alert in Testing Server
+2025-03-12 14:50:31,483 - INFO - ffmpeg process 222884 successfully terminated with return code of 0.
+2025-03-12 14:50:32,455 - INFO - Monitoring voice activity in General
+2025-03-12 14:50:32,456 - INFO - merlyn4433 is speaking in General
+2025-03-12 14:50:32,488 - INFO - Played alert in Testing Server
+2025-03-12 14:50:33,496 - INFO - Monitoring voice activity in General
+2025-03-12 14:50:34,507 - INFO - Monitoring voice activity in General
+2025-03-12 14:50:35,510 - INFO - Monitoring voice activity in General
+2025-03-12 14:50:36,520 - INFO - Monitoring voice activity in General
+2025-03-12 14:50:36,549 - INFO - Finished playing alert in Testing Server
+2025-03-12 14:50:36,550 - INFO - ffmpeg process 224468 successfully terminated with return code of 0.
+2025-03-12 14:50:37,533 - INFO - Monitoring voice activity in General
+2025-03-12 14:50:38,544 - INFO - Monitoring voice activity in General
+2025-03-12 14:50:39,552 - INFO - Monitoring voice activity in General
+2025-03-12 14:50:40,565 - INFO - Monitoring voice activity in General
+2025-03-12 14:50:40,975 - INFO - The voice handshake is being terminated for Channel ID 1346987972121071743 (Guild ID 1346987972121071739)
+2025-03-12 14:50:41,572 - WARNING - Bot lost connection or is not in a voice channel in Testing Server
+2025-03-12 15:01:45,977 - INFO - logging in using static token
+2025-03-12 15:01:46,880 - INFO - Shard ID None has connected to Gateway (Session ID: 609b168236b1de9d703dc14813a166b0).
+2025-03-12 15:01:48,923 - INFO - Logged in as anti-yappinator#0972 (ID: 1346984198023680121)
+2025-03-12 15:03:19,848 - INFO - Target set: merlyn4433 (ID: 621453482771087380) in guild Testing Server
+2025-03-12 15:03:24,260 - INFO - Connecting to voice...
+2025-03-12 15:03:24,262 - INFO - Starting voice handshake... (connection attempt 1)
+2025-03-12 15:03:24,434 - INFO - Voice handshake complete. Endpoint found: us-west2885.discord.media
+2025-03-12 15:03:24,977 - INFO - Voice connection complete.
+2025-03-12 15:03:24,978 - INFO - Bot joined General.
+2025-03-12 15:03:25,990 - INFO - merlyn4433 is speaking in General
+2025-03-12 15:03:26,036 - INFO - Played alert in Testing Server
+2025-03-12 15:03:27,043 - INFO - merlyn4433 is speaking in General
+2025-03-12 15:03:28,057 - INFO - merlyn4433 is speaking in General
+2025-03-12 15:03:29,067 - INFO - merlyn4433 is speaking in General
+2025-03-12 15:03:30,074 - INFO - merlyn4433 is speaking in General
+2025-03-12 15:03:30,099 - INFO - Finished playing alert in Testing Server
+2025-03-12 15:03:30,103 - INFO - ffmpeg process 54060 successfully terminated with return code of 0.
+2025-03-12 15:03:31,082 - INFO - merlyn4433 is speaking in General
+2025-03-12 15:03:31,098 - INFO - Played alert in Testing Server
+2025-03-12 15:03:32,115 - INFO - merlyn4433 is speaking in General
+2025-03-12 15:03:33,122 - INFO - merlyn4433 is speaking in General
+2025-03-12 15:03:34,138 - INFO - merlyn4433 is speaking in General
+2025-03-12 15:03:35,161 - INFO - Finished playing alert in Testing Server
+2025-03-12 15:03:35,164 - INFO - ffmpeg process 224184 successfully terminated with return code of 0.
+2025-03-12 15:03:40,207 - INFO - merlyn4433 is speaking in General
+2025-03-12 15:03:40,217 - INFO - Played alert in Testing Server
+2025-03-12 15:03:41,221 - INFO - merlyn4433 is speaking in General
+2025-03-12 15:03:42,232 - INFO - merlyn4433 is speaking in General
+2025-03-12 15:03:43,241 - INFO - merlyn4433 is speaking in General
+2025-03-12 15:03:44,246 - INFO - merlyn4433 is speaking in General
+2025-03-12 15:03:44,280 - INFO - Finished playing alert in Testing Server
+2025-03-12 15:03:44,283 - INFO - ffmpeg process 207064 successfully terminated with return code of 0.
+2025-03-12 15:03:45,253 - INFO - merlyn4433 is speaking in General
+2025-03-12 15:03:45,267 - INFO - Played alert in Testing Server
+2025-03-12 15:03:46,279 - INFO - Leaving General as it's empty.
+2025-03-12 15:03:46,282 - INFO - The voice handshake is being terminated for Channel ID 1346987972121071743 (Guild ID 1346987972121071739)
+2025-03-12 15:03:46,287 - INFO - Finished playing alert in Testing Server
+2025-03-12 15:03:46,290 - INFO - ffmpeg process 202604 has not terminated. Waiting to terminate...
+2025-03-12 15:03:46,309 - INFO - ffmpeg process 202604 should have terminated with a return code of 1.
