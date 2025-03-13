@@ -2198,3 +2198,25 @@ discord.errors.ClientException: ffmpeg was not found.
 2025-03-12 15:03:46,287 - INFO - Finished playing alert in Testing Server
 2025-03-12 15:03:46,290 - INFO - ffmpeg process 202604 has not terminated. Waiting to terminate...
 2025-03-12 15:03:46,309 - INFO - ffmpeg process 202604 should have terminated with a return code of 1.
+2025-03-12 17:02:28,303 - INFO - logging in using static token
+2025-03-12 17:02:29,514 - INFO - Shard ID None has connected to Gateway (Session ID: 9dec6c7eb3581590b131d33c887b5d59).
+2025-03-12 17:02:31,523 - INFO - Logged in as anti-yappinator#0972 (ID: 1346984198023680121)
+2025-03-12 17:42:27,108 - INFO - logging in using static token
+2025-03-12 17:42:28,212 - INFO - Shard ID None has connected to Gateway (Session ID: f75aff58de5f01897931f5abe122b9e3).
+2025-03-12 17:42:30,232 - INFO - Logged in as anti-yappinator#0972 (ID: 1346984198023680121)
+2025-03-12 17:42:30,726 - INFO - Synced 1 command(s)
+2025-03-12 18:39:37,212 - WARNING - Shard ID None has stopped responding to the gateway. Closing and restarting.
+2025-03-12 18:39:37,622 - INFO - Shard ID None session has been invalidated.
+2025-03-12 18:39:43,387 - INFO - Shard ID None has connected to Gateway (Session ID: 8af3facc45c2ff96aece0beea6789112).
+2025-03-12 18:39:45,426 - INFO - Logged in as anti-yappinator#0972 (ID: 1346984198023680121)
+2025-03-12 18:39:45,983 - INFO - Synced 1 command(s)
+2025-03-12 19:46:37,085 - WARNING - Shard ID None has stopped responding to the gateway. Closing and restarting.
+2025-03-12 19:46:38,050 - INFO - Shard ID None session has been invalidated.
+2025-03-12 19:46:43,433 - INFO - Shard ID None has connected to Gateway (Session ID: bfeb1de9e1166f62127f3a236efeda7d).
+2025-03-12 19:46:45,543 - INFO - Logged in as anti-yappinator#0972 (ID: 1346984198023680121)
+2025-03-12 19:46:46,064 - INFO - Synced 1 command(s)
+2025-03-13 13:32:01,921 - INFO - logging in using static token
+2025-03-13 13:32:02,831 - INFO - Shard ID None has connected to Gateway (Session ID: a0cf1f7769c11bba6f0e3ed00a43804b).
+2025-03-13 13:32:04,842 - INFO - Logged in as anti-yappinator#0972 (ID: 1346984198023680121)
+2025-03-13 13:32:05,251 - INFO - Synced 1 command(s)
+2025-03-13 13:32:30,003 - INFO - Target set: skrubls (ID: 617064900799234064) in guild Testing Server
